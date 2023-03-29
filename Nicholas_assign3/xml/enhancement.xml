@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="description" content="Basic HTML elements"/>
+      <meta name="keywords" content="HTML5, tags"/>
+      <meta name="author" content="Nicholas"/>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      <link rel="shortcut icon" href="css/img/fav-icon.jpg" type="image/jpg">
+      <link rel="stylesheet" href="css/style.css">
+      <title>ENHANCEMENTS: Dota 2</title>
+    </head>
+<body id="bgimg10">
+  <nav>
+      <div class="logo">
+          <h4><a href="./index.html"><img src="css/img/logo.png" alt="Logo"></a></h4>
+      </div>
+        <ul class="nav-links">
+          <li><a href="./index.html">Main</a>
+              <div class="sub-menu">
+                  <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./characters.html">Heroes</a></li>
+                    <li><a href="./updates.html">Updates</a></li>
+                    <li><a href="./esports.html">Esports</a></li>
+                  </ul>
+              </div>
+          </li>
+          <li><a href="./aboutme.html">Profile</a></li>
+          <li><a href="./enquiry.html">Enquiry</a></li>
+          <li><a href="./disclaimer.html">Disclaimer</a></li>
+          <li><a href="./acknowledgement.html">Acknowledgement</a></li>
+          <li><a href="./enhancement.html" class="position">Enhancements</a></li>
+        </ul>
+  </nav>
+
+<fieldset class="homep2">
+  <legend class="ti-title3">Drop-down Menu</legend>
+  <div class="content2">
+    <p>
+      Drop-down Menu is embedded within the navigation page to help users avoid scrolling and can quickly get them access to the site's content. For large websites, drop-down menus can save users time by allowing them to jump down a level or two to get to the content they seek.
+    <br>
+    <br>
+      Coding in HTML:<br>
+              div class="sub-menu"<br>
+                  ul<br>
+                    li a href="./home.html" Home /a /li<br>
+                    li a href="./characters.html" Heroes /a /li<br>
+                    li a href="./updates.html" Updates /a  /li<br>
+                    li a href="./esports.html" Esports /a /li<br>
+                  /ul<br>
+              /div<br>
+              <br>
+              Cited in: YouTube
+              <br>
+    </p>
+</fieldset>
+  <br>
+<fieldset class="homep2">
+    <legend class="ti-title3">Google Maps</legend>
+    <div class="content2">
+      <p>
+        Google Maps is embedded in the about me page. The purpose of implementing the map within the webpage is to provide a much accurate location of that place.
+      <br>
+      <br>
+        Coding in HTML:<br>
+        iframe src="https://www.google.com/maps/embed?<br>
+        pb=!1m18!1m12!1m3!1d3988.3915937128427!2d110.3549845145214!3d1.53230209888<br>
+        25542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31fba70b11e02ce7<br>
+        %3A0x69cbf290cfd24bb7!2sSwinburne%20University%20of%20Technology%20Sarawak<br>
+        %20Campus!5e0!3m2!1sen!2smy!4v1649256790758!5m2!1sen!2smy"width="600" heig<br>
+        ht="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolic<br>
+        y="no-referrer-when-downgrade"<br>
+        /iframe<br>
+        <br>
+        Cited in: Google
+        <br>
+      </p>
+</fieldset>
+    <br>
+    <fieldset class="homep2">
+      <legend class="ti-title3">Image Slider</legend>
+      <div class="content2">
+      <p>
+        Image Slider is embedded at the index page to showcase images which can show much more information and save more space than on a printing document. It allows users to access the information quickly, without scrolling vertically or using the mouse.
+        <br>
+        <br>
+          Coding in HTML:<br>
+          div class="slider"<br>
+              div class="imgs_slides"<br>
+                  input type="radio" name="radio-btn" id="radio1" /<br>
+                  input type="radio" name="radio-btn" id="radio2" /<br>
+                  input type="radio" name="radio-btn" id="radio3" /<br>
+                  input type="radio" name="radio-btn" id="radio4" /<br>
+
+                  div class="first slide"<br>
+                      a href="./home.html"<br>
+                          img src= "css/img/1.jpg" /<br>
+                          div class="text-block"<br>
+                            p Home /p<br>
+                          /div<br>
+                      /a<br>
+                  /div<br>
+                  div class="slide"<br>
+                      a href="./characters.html"<br>
+                          img src= "css/img/2.jpg" /<br>
+                          div class="text-block"<br>
+                            p Heroes /p <br>
+                          /div<br>
+                      /a<br>
+                  /div<br>
+                  div class="slide"<br>
+                      a href="./updates.html"<br>
+                          img src= "css/img/upd1.jpg" /<br>
+                          div class="text-block"<br>
+                            p Updates /p <br>
+                          /div <br>
+                      /a<br>
+                  /div<br>
+                  div class="slide"<br>
+                      a href="./esports.html"<br>
+                          img src= "css/img/4.jpg" /<br>
+                          div class="text-block"<br>
+                            p Esports /p<br>
+                          /div<br>
+                      /a<br>
+                  /div<br>
+
+                  div class="navigation"<br>
+                      label for="radio1" class="navigation-btn"<br>
+                      /label<br>
+                      label for="radio2" class="navigation-btn"<br>
+                      /label<br>
+                      label for="radio3" class="navigation-btn"<br>
+                      /label<br>
+                      label for="radio4" class="navigation-btn"<br>
+                      /label<br>
+                  /div<br>
+              /div<br>
+            /div<br>
+            <br>
+            Cited in: YouTube
+            <br>
+      </p>
+    </fieldset>
+      <br>
+      <fieldset class="homep2">
+        <legend class="ti-title3">Tooltip</legend>
+        <div class="content2">
+        <p>
+          Tooltip is embedded at the esports page to highlight new features inside the platform without interrupting the user's workflow. Unlike pop-ups, tooltips are a non-intrusive and efficient way to promote new features since they draw user's attention while providing additional information next to the feature itself.
+          <br>
+          <br>
+          Coding in CSS:<br>
+          .TI .ti-p{<br>
+            visibility: hidden;<br>
+            z-index:1;<br>
+          }<br>
+          .TI:hover #dc{<br>
+            visibility: hidden;<br>
+          }<br>
+          .TI:hover .ti-p{<br>
+            visibility: visible;<br>
+          }
+          .desc{<br>
+            text-align: center;<br>
+          }<br>
+          <br>
+          Cited in: Google
+          <br>
+        </p>
+      </fieldset>
+        <br>
+        <fieldset class="homep2">
+          <legend class="ti-title3">Youtube Video</legend>
+          <div class="content2">
+            <p>
+              Youtube Video is embedded at the home page to makes it easier for others to view, use, and share the videos. Users don’t have to fiddle around trying to get the video to play on their device, and they don’t have to jump through a lot of hoops to show it to other people.
+              <br>
+              <br>
+              Coding in HTML:<br>
+              iframe width="100%" height="400px" src="https://www.youtube.com/embed/-cSFPIwMEq4" frameborder="0" allowfullscreen /iframe<br>
+              iframe width="100%" height="400px" src="https://www.youtube.com/embed/Ii_EjA7bqYw" frameborder="0" allowfullscreen /iframe<br>
+              iframe width="100%" height="400px" src="https://www.youtube-nocookie.com/embed/89Yi3IV8JXI" frameborder="0" allowfullscreen /iframe<br>
+              <br>
+              Cited in: YouTube
+              <br>
+            </p>
+        </fieldset>
+          <br>
+<!--footer-->
+<div class="footer">
+    Copyright 2014 Sea Monsters Inc. All Right Reserved.
+</div>
+</div>
+
+</script>
+</body>
+</html>
