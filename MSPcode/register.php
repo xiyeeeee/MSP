@@ -8,7 +8,7 @@
       <meta http-equiv="Cache-control" content="no-cache">
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
       <link rel="shortcut icon" href="img/fav-icon.jpg" type="image/jpg">
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/style1.css">
       <title>REGISTER: ETMP</title>
     </head>
 <body id="regbg">
