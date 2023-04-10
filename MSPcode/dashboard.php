@@ -9,7 +9,7 @@ $pageTitle = "Dashboard";
 <head>
     
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
     <script src="script.js"></script>
     
 
