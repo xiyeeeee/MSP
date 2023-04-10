@@ -7,12 +7,10 @@
       	<meta name="author" content="Nicholas"/>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="img/fav-icon.jpg" type="image/jpg">
-        <link rel="stylesheet" href="css/style.css">
-    <title>LOGIN: Dota 2</title>
+        <link rel="stylesheet" href="css/style1.css">
+    <title>LOGIN: ETMP</title>
 </head>
 <body id="login_page">
-    <?php include 'navigation.php';?>
-
     <article>
         <section class="login_section">
             <div class="login_container">
@@ -43,9 +41,6 @@
             </div>
         </section>
     </article>
-
-    <?php include 'footer.php';?>
-
     <script src="script/nav.js"></script>
     <script src="https://kit.fontawesome.com/2076012a21.js" crossorigin="anonymous"></script>
 </body>
