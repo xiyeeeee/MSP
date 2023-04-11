@@ -10,13 +10,13 @@
         <link rel="stylesheet" href="css/style1.css">
     <title>LOGIN: ETMP</title>
 </head>
-<body id="login_page">
+<body id="logbg">
     <article>
         <section class="login_section">
             <div class="login_container">
                 <div class="user">
                     <div class="imgBx">
-                        <img src="img/login.jpg" alt="Background">
+                        <img src="img/log.webp" alt="Background">
                     </div>
                     <div class="formBx">
                         <form action="includes/login.inc.php" method="post">
