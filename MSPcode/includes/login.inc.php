@@ -13,13 +13,7 @@ if (isset($_POST["submit"])){
         header("location: ../login.php?error=emptyinput");
         exit();
     }
-    if (loginUser($conn, $adname, $adpass)) {
-      header("location: ../admin.php");
-      exit();
-    } else {
-      header("location: ../login.php?error=wronglogin");
-      exit();
-    }
+    
 
     loginUser($conn, $username, $pwd);
 } else {

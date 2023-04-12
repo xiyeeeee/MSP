@@ -36,7 +36,6 @@
                 echo '<input type="hidden" name="selected_user_name" value="' . $username . '"/>';
                 ?>
                 <button type="submit" name="delete">Delete</button>
-                <button onclick="location.href='users.php'">Return</button>
             </form>
         </div>
     </article>
