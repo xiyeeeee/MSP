@@ -44,7 +44,7 @@ $pageTitle = "Dashboard";
             <a href="#">Category 4</a>
           </div>
         </li>
-        <li><a href="logout.inc.php">Logout <i class="fas fa-user-circle"></i></a></li>
+        <li><a href="./includes/logout.inc.php">Logout <i class="fas fa-user-circle"></i></a></li>
       </ul>
     </nav>
   </div>
