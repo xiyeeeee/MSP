@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
 
-  
+
 }
 
 .my-heading {
@@ -123,7 +123,7 @@ body {
   position: relative;
   top: 80px;
   height: 200px;
-  
+
 
 }
 
@@ -192,11 +192,11 @@ a {
   display: flex;
   color: #1c1c1c;
   padding: 50px;
-  
+
   margin-left: 0px;
   padding-bottom: 250px;
   margin-top: 550px;
-  
+
 }
 
 .left-column {
@@ -204,7 +204,7 @@ a {
   float: left;
   margin-top: 100px;
   margin-right: 200px;
-  
+
 }
 
 .left-column p{
@@ -214,7 +214,7 @@ a {
 .right-column {
   width: 50%;
   float: right;
-  
+
 }
 
 .slideshow-container {
@@ -222,7 +222,7 @@ a {
   max-width: 100%;
   margin-top: 100px;
   overflow: hidden;
-  
+
 }
 
 
@@ -329,4 +329,3 @@ margin: 0;
 .footer-copyright {
 margin-left: auto;
 }
-

@@ -14,7 +14,7 @@ if (isset($_POST["submit"])){
         exit();
     }
     if (loginUser($conn, $adname, $adpass)) {
-      header("location: ../index.php");
+      header("location: ../admin.php");
       exit();
     } else {
       header("location: ../login.php?error=wronglogin");

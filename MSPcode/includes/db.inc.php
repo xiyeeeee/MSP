@@ -6,7 +6,7 @@ function checkConnection($conn){
 }
 
 function createDatabase($conn){
-    $sql = "CREATE DATABASE IF NOT EXISTS $dbName";
+    $sql = "CREATE DATABASE IF NOT EXISTS expert_db";
     mysqli_query($conn, $sql);
 }
 
