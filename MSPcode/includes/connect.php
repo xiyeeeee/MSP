@@ -8,7 +8,7 @@
     if (!$conn) {
         die("Connection failed: " .  mysqli_connect_error());
     }
-    
+
     //Create database if not exists
     $createDB = "CREATE DATABASE IF NOT EXISTS $dbName"
     mysqli_query($conn, $createDB);
@@ -29,7 +29,7 @@
             tCategory VARCHAR(128) NOT NULL,
             tDescription VARCHAR(128) NOT NULL,
         )";
-    
+
         mysqli_query($conn, $sql);
     }
 ?>

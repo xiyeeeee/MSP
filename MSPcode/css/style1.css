@@ -10,6 +10,11 @@
   background-size: cover;
   background-blend-mode: darken;
 }
+
+#profilebg{
+  background: rgba(0, 0, 0, 0.5)url(../img/profile.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
 /*REGISTER*/
 .register_section{
     position: relative;
@@ -253,4 +258,199 @@
     text-transform: uppercase;
     font-weight: 600;
     text-align: center;
+}
+/*Profile*/
+/*Change Password*/
+.change-password-form{
+    padding: 10px;
+    text-align: center;
+    background-color: #cfa4bb;
+    border: 8px solid #5D4954;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.change-password-form h2{
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+.change-password-form input{
+    display: block;
+    margin: auto;
+    background: #cfa4bb;
+    border: none;
+    margin-top: 25px;
+    border-bottom: 3px solid #5D4954;
+    font-size: 14px;
+}
+
+.change-password-form button{
+    margin: 25px;
+    padding: 10px;
+    background: #fff;
+    border: 2px solid #5D4954;
+    border-radius: 10px;
+    color: #5D4954;
+    font-weight: bold;
+    outline: none;
+}
+
+.change-password-form button:hover{
+    background: #5D4954;
+    color: #fff;
+
+}
+
+@media screen and (max-width: 1000px){
+    .change-password-form{
+        margin-top: 8%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .change-password-form{
+        margin-top: 10%;
+    }
+}
+/*Delete Account*/
+.delete-form{
+    text-align: center;
+    padding: 30px;
+    border: 5px solid black;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.confirm-user{
+    margin: 0px 20px 15px 20px;
+    font-weight: 600;
+    font-size: 1.3em;
+
+}
+
+.warning-delete{
+    border-left: 10px solid red;
+    border-top: 3px solid red ;
+    border-right: 3px solid red ;
+    border-bottom: 3px solid red ;
+    padding: 10px;
+    font-weight: 300;
+}
+
+.delete-form input{
+    display: block;
+    margin: auto;
+    margin-top: 8px;
+    padding: 2px;
+}
+
+.delete-form button{
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+@media screen and (max-width: 1000px){
+    .delete-form{
+        margin-top: 8%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .delete-form{
+        margin-top: 10%;
+    }
+}
+
+.cfm{
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+/*Back to top button*/
+#back-to-top-btn{
+	position:fixed;
+	bottom:40px;
+	right:20px;
+	font-size: 26px;
+	width: 50px;
+	height: 50px;
+	background-color: #fff;
+	color: #333;
+	cursor: pointer;
+	outline: none;
+	border: 3px solid #333;
+	border-radius: 50%;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+	transition-property: background-color,color;
+}
+
+#back-to-top-btn:hover, #back-to-top-btn:focus {
+	background-color: #333;
+	color: #fff;
+}
+
+/* Animations */
+#back-to-top-btn{
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-name: back-to-top-btnEntrance;
+}
+/* zoomIn */
+@keyframes back-to-top-btnEntrance {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* fadeInUp */
+@keyframes back-to-top-btnEntrance {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.back-to-top-btnExit {
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-name: back-to-top-btnExit;
+}
+
+
+/* zoomOut */
+@keyframes back-to-top-btnExit {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+}
+
+/* fadeOutDown */
+@keyframes back-to-top-btnExit {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
 }

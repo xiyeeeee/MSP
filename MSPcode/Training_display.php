@@ -7,7 +7,7 @@
 			background-color: #333;
 			overflow: hidden;
 		}
-		
+
 		nav a {
 			float: left;
 			color: white;
@@ -15,17 +15,17 @@
 			padding: 14px 16px;
 			text-decoration: none;
 		}
-		
+
 		nav a:hover {
 			background-color: #ddd;
 			color: black;
 		}
-		
+
 		.dropdown {
 			float: left;
 			overflow: hidden;
 		}
-		
+
 		.dropdown .dropbtn {
 			cursor: pointer;
 			font-size: 16px;
@@ -37,12 +37,12 @@
 			font-family: inherit;
 			margin: 0;
 		}
-		
+
 		nav a:hover, .dropdown:hover .dropbtn {
 			background-color: #ddd;
 			color: black;
 		}
-		
+
 		.dropdown-content {
 			display: none;
 			position: absolute;
@@ -51,7 +51,7 @@
 			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 			z-index: 1;
 		}
-		
+
 		.dropdown-content a {
 			float: none;
 			color: black;
@@ -60,11 +60,11 @@
 			display: block;
 			text-align: left;
 		}
-		
+
 		.dropdown-content a:hover {
 			background-color: #ddd;
 		}
-		
+
 		.dropdown:hover .dropdown-content {
 			display: block;
 		}

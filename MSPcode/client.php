@@ -7,77 +7,103 @@ $pageTitle = "Dashboard";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
     <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" href="css/style2.css">
     <script src="script.js"></script>
-    
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
 </head>
 <body>
 
-    <div class="logo-container">
-        <div class="logo">
-          <h1 class="logo-text">Expert<span class="trademark">&reg;</span></h1>
-        </div>
-      </div>
+      <div class="header-container">
+  <div class="logo-container">
+    <div class="logo">
+      <h1 class="logo-text">Expert<span class="trademark">&reg;</span></h1>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li class="dropdown">
+          <a href="#">Training <i class="fas fa-bicycle"></i></a>
+          <div class="dropdown-content">
+            <a href="#">Menu</a>
+            <a href="#">Request</a>
+          </div>
+        </li>
+        <li><a href="#">Booking <i class="fas fa-cart-plus"></i></a></li>
+        <li><a href="profile.php">Profile <i class="fas fa-user"></i></a></li>
+        <li><a href="client.php">Home <i class="fas fa-home"></i></a></li>
+        <li class="dropdown">
+          <a href="#">Category <i class="fas fa-bars"></i></a>
+          <div class="dropdown-content">
+            <a href="#">Category 1</a>
+            <a href="#">Category 2</a>
+            <a href="#">Category 3</a>
+            <a href="#">Category 4</a>
+          </div>
+        </li>
+        <li><a href="./includes/logout.inc.php">Logout <i class="fas fa-user-circle"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
 
     <div class="dashboard">
         <a href="test.html">
         <div class="category">
           <div class="slideshow">
             <img src="./img/volleyball.jpg">
-            
+
             <img src="./img/swimming.jpg">
           </div>
-          <h2>Training</h2>
+          <h2 class= my-heading>Training</h2>
         </div>
     </a>
-        
-        
+
+
     <a href="test.html">
         <div class="category">
           <div class="slideshow">
             <img src="./img/paymenthd.jpg">
-            
+
             <img src="./img/paymenthd2.png">
           </div>
-          <h2>Payment</h2>
+          <h2 class= my-heading >Payment</h2>
         </div>
         </a>
-        
+
 
         <a href="test.html">
         <div class="category">
           <div class="slideshow">
-           
-            <img src="./img/chathd.jpg">
+
+            <img src="./img/ChatManagement2.png">
             <img src="./img/livechat.jpeg">
           </div>
-          <h2>Chat with us</h2>
+          <h2 class= my-heading>Chat with us</h2>
         </div>
     </a>
-        
+
 
         <a href="test.html">
         <div class="category">
           <div class="slideshow">
             <img src="./img/itinerary.png">
-            
+
             <img src="./img/itinerary2.png">
           </div>
-          <h2>Itinerary</h2>
+          <h2 class= my-heading>Itinerary</h2>
         </div>
     </a>
 
         <br>
         <br>
         <br>
-        
 
-        
+
+
       </div>
       <div class="new-section">
         <div class="left-column">
@@ -87,7 +113,7 @@ $pageTitle = "Dashboard";
   <div class="slideshow-container">
   <iframe src="https://www.youtube.com/embed/YvrKIQ_Tbsk?autoplay=1&rel=0&mute=1" width="560" height="315" title="Cardio vs. strength training: What you need to know" frameborder="0" allowfullscreen></iframe>
 </div>
-      
+
       </div>
       </div>
 
@@ -102,7 +128,7 @@ $pageTitle = "Dashboard";
         </ul>
         <p class="footer-info">Phone: 123-456-7890 | Address: 123 Main St. | Email: info@expert.com</p>
         <div class="footer-logo">
-          
+
           <p class="footer-copyright">Expert Training since 2023 &#169; </p>
         </div>
       </div>
@@ -117,7 +143,7 @@ $pageTitle = "Dashboard";
     </div>
   </footer>
   </div>
-    
-    
+
+
 </body>
 </html>
