@@ -7,11 +7,11 @@ $pageTitle = "Dashboard";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="css/db.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
     <script src="script.js"></script>
-    
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
@@ -26,14 +26,10 @@ $pageTitle = "Dashboard";
     <nav class="navbar">
       <ul>
         <li class="dropdown">
-          <a href="#">Training <i class="fas fa-bicycle"></i></a>
-          <div class="dropdown-content">
-            <a href="#">Menu</a>
-            <a href="#">Request</a>
-          </div>
+          <a href="#">Training Management<i class="fas fa-bicycle"></i></a>
         </li>
-        <li><a href="#">Booking <i class="fas fa-cart-plus"></i></a></li>
-        <li><a href="profile.php">Profile <i class="fas fa-user"></i></a></li>
+        <li><a href="#">Request Management<i class="fas fa-comments"></i></a></li>
+        <li><a href="#">Booking Management<i class="fas fa-calendar"></i></a></li>
         <li><a href="dashboard.php">Home <i class="fas fa-home"></i></a></li>
         <li class="dropdown">
           <a href="#">Category <i class="fas fa-bars"></i></a>
@@ -44,13 +40,68 @@ $pageTitle = "Dashboard";
             <a href="#">Category 4</a>
           </div>
         </li>
-        <li><a href="login.php">Logout <i class="fas fa-user-circle"></i></a></li>
+        <li class="navbar-item"><a href="login.php">Logout <i class="fas fa-user-circle"></i></a></li>
       </ul>
     </nav>
   </div>
 </div>
 
-    <div class="dashboard">
+    <!--<div class="dashboard">
+        <a href="#">
+        <div class="category">
+          <div class="slideshow">
+            <img src="./img/TrainingManagement.png">
+
+            <img src="./img/FileManagement2.png">
+          </div>
+          <h2 class= training-heading>Training Management</h2>
+        </div>
+    </a>
+
+
+    <a href="test.html">
+        <div class="category">
+          <div class="slideshow">
+            <img src="./img/RequestManagement2.png">
+
+            <img src="./img/RequestManagement3.png">
+          </div>
+          <h2 class= training-heading>Request Management</h2>
+        </div>
+        </a>
+
+
+        <a href="test.html">
+        <div class="category">
+          <div class="slideshow">
+
+            <img src="./img/OrderManagement.png">
+            <img src="./img/OrderManagement2.png">
+          </div>
+          <h2 class= training-heading>Booking Management</h2>
+        </div>
+    </a>
+
+
+        <a href="test.html">
+        <div class="category">
+          <div class="slideshow">
+            <img src="./img/FileManagement.png">
+
+            <img src="./img/FileManagement3.png">
+          </div>
+          <h2 class= training-heading>Itinerary Management</h2>
+        </div>
+    </a>
+
+        <br>
+        <br>
+        <br>
+
+
+
+      </div>-->
+      <div class="dashboard">
         <a href="test.html">
         <div class="category">
           <div class="slideshow">
@@ -113,7 +164,7 @@ $pageTitle = "Dashboard";
   <div class="slideshow-container">
   <iframe src="https://www.youtube.com/embed/YvrKIQ_Tbsk?autoplay=1&rel=0&mute=1" width="560" height="315" title="Cardio vs. strength training: What you need to know" frameborder="0" allowfullscreen></iframe>
 </div>
-      
+
       </div>
       </div>
 
@@ -128,7 +179,7 @@ $pageTitle = "Dashboard";
         </ul>
         <p class="footer-info">Phone: 123-456-7890 | Address: 123 Main St. | Email: info@expert.com</p>
         <div class="footer-logo">
-          
+
           <p class="footer-copyright">Expert Training since 2023 &#169; </p>
         </div>
       </div>
@@ -143,7 +194,7 @@ $pageTitle = "Dashboard";
     </div>
   </footer>
   </div>
-    
-    
+
+
 </body>
 </html>
