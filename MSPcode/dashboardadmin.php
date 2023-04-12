@@ -9,7 +9,7 @@ $pageTitle = "Dashboard";
 <head>
     
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
     <script src="script.js"></script>
     
 
@@ -26,14 +26,14 @@ $pageTitle = "Dashboard";
     <nav class="navbar">
       <ul>
         <li class="dropdown">
-          <a href="#">Training <i class="fas fa-bicycle"></i></a>
+          <a href="#">Training<i class="fas fa-bicycle"></i></a>
           <div class="dropdown-content">
             <a href="#">Menu</a>
             <a href="#">Request</a>
           </div>
         </li>
-        <li><a href="#">Booking <i class="fas fa-cart-plus"></i></a></li>
-        <li><a href="#">Profile <i class="fas fa-user"></i></a></li>
+        <li><a href="#">Booking<i class="fas fa-cart-plus"></i></a></li>
+        <li><a href="#">Profile<i class="fas fa-user"></i></a></li>
         <li><a href="dashboard.php">Home <i class="fas fa-home"></i></a></li>
         <li class="dropdown">
           <a href="#">Category <i class="fas fa-bars"></i></a>
@@ -51,14 +51,14 @@ $pageTitle = "Dashboard";
 </div>
 
     <div class="dashboard">
-        <a href="test.html">
+        <a href="#">
         <div class="category">
           <div class="slideshow">
-            <img src="./img/volleyball.jpg">
+            <img src="./img/TrainingManagement.png">
             
-            <img src="./img/swimming.jpg">
+            <img src="./img/FileManagement2.png">
           </div>
-          <h2 class= my-heading>Training</h2>
+          <h2 class= training-heading>Training Management</h2>
         </div>
     </a>
         
@@ -66,11 +66,11 @@ $pageTitle = "Dashboard";
     <a href="test.html">
         <div class="category">
           <div class="slideshow">
-            <img src="./img/paymenthd.jpg">
+            <img src="./img/RequestManagement2.png">
             
-            <img src="./img/paymenthd2.png">
+            <img src="./img/RequestManagement3.png">
           </div>
-          <h2 class= my-heading >Payment</h2>
+          <h2 class= training-heading>Request Management</h2>
         </div>
         </a>
         
@@ -79,10 +79,10 @@ $pageTitle = "Dashboard";
         <div class="category">
           <div class="slideshow">
            
-            <img src="./img/ChatManagement2.png">
-            <img src="./img/livechat.jpeg">
+            <img src="./img/OrderManagement.png">
+            <img src="./img/OrderManagement2.png">
           </div>
-          <h2 class= my-heading>Chat with us</h2>
+          <h2 class= training-heading>Booking Management</h2>
         </div>
     </a>
         
@@ -90,11 +90,11 @@ $pageTitle = "Dashboard";
         <a href="test.html">
         <div class="category">
           <div class="slideshow">
-            <img src="./img/itinerary.png">
+            <img src="./img/FileManagement.png">
             
-            <img src="./img/itinerary2.png">
+            <img src="./img/FileManagement3.png">
           </div>
-          <h2 class= my-heading>Itinerary</h2>
+          <h2 class= training-heading>Itinerary Management</h2>
         </div>
     </a>
 
