@@ -28,7 +28,7 @@
           </div>
         </li>
         <li><a href="#">Booking <i class="fas fa-cart-plus"></i></a></li>
-        <li><a href="#">Profile <i class="fas fa-user"></i></a></li>
+        <li><a href="profile.php">Profile <i class="fas fa-user"></i></a></li>
         <li><a href="dashboard.php">Home <i class="fas fa-home"></i></a></li>
         <li class="dropdown">
           <a href="#">Category <i class="fas fa-bars"></i></a>
