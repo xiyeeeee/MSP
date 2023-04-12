@@ -6,7 +6,7 @@ function checkConnection($conn){
 }
 
 function createDatabase($conn){
-    $sql = "CREATE DATABASE IF NOT EXISTS ETMPdb";
+    $sql = "CREATE DATABASE IF NOT EXISTS $dbName";
     mysqli_query($conn, $sql);
 }
 
@@ -46,7 +46,7 @@ function createTableEnquiry($conn){
 $serverName = "localhost";
 $dBUsername = "root";
 $dBPassword = "";
-$dBName = "ETMPdb";
+$dBName = "expert_db";
 
 $conn = mysqli_connect($serverName, $dBUsername, $dBPassword);
 checkConnection($conn);
