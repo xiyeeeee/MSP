@@ -8,8 +8,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="img/fav-icon.jpg" type="image/jpg">
         <link rel="stylesheet" href="css/style1.css">
-        
-        
+
+
         <title>PROFILE: ETMP</title>
     </head>
 <body id="profilebg">
@@ -54,7 +54,7 @@
         <button onclick="location.href='delete_acc.php'" class="non_active_user">Delete Account</button>
     </div>
 
-  
+
 </article>
 <section class="my-section">
 <div class= "btn_outputs">
@@ -82,7 +82,6 @@
                     echo "<td>" . $row["usersUid"] . "</td>";
                     echo "<td>" . $row["regDate"] . "</td>";
                     echo "<td>";
-                    echo '<form action="dlt_confirm.php" method="post">';
                     echo '<input type="hidden" name="selected_user_id" value="' . $row["usersId"] . '"/>';
                     echo '<input type="hidden" name="selected_user_name" value="' . $row["usersUid"] . '"/>';
                     echo '<button type="submit" name="delete">Delete</button>';

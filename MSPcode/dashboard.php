@@ -7,11 +7,11 @@ $pageTitle = "Dashboard";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
     <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" href="css/db.css">
     <script src="script.js"></script>
-    
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
@@ -55,43 +55,43 @@ $pageTitle = "Dashboard";
         <div class="category">
           <div class="slideshow">
             <img src="./img/volleyball.jpg">
-            
+
             <img src="./img/swimming.jpg">
           </div>
           <h2 class= my-heading>Training</h2>
         </div>
     </a>
-        
-        
+
+
     <a href="test.html">
         <div class="category">
           <div class="slideshow">
             <img src="./img/paymenthd.jpg">
-            
+
             <img src="./img/paymenthd2.png">
           </div>
           <h2 class= my-heading >Payment</h2>
         </div>
         </a>
-        
+
 
         <a href="test.html">
         <div class="category">
           <div class="slideshow">
-           
+
             <img src="./img/ChatManagement2.png">
             <img src="./img/livechat.jpeg">
           </div>
           <h2 class= my-heading>Chat with us</h2>
         </div>
     </a>
-        
+
 
         <a href="test.html">
         <div class="category">
           <div class="slideshow">
             <img src="./img/itinerary.png">
-            
+
             <img src="./img/itinerary2.png">
           </div>
           <h2 class= my-heading>Itinerary</h2>
@@ -101,9 +101,9 @@ $pageTitle = "Dashboard";
         <br>
         <br>
         <br>
-        
 
-        
+
+
       </div>
       <div class="new-section">
         <div class="left-column">
@@ -113,7 +113,7 @@ $pageTitle = "Dashboard";
   <div class="slideshow-container">
   <iframe src="https://www.youtube.com/embed/YvrKIQ_Tbsk?autoplay=1&rel=0&mute=1" width="560" height="315" title="Cardio vs. strength training: What you need to know" frameborder="0" allowfullscreen></iframe>
 </div>
-      
+
       </div>
       </div>
 
@@ -128,7 +128,7 @@ $pageTitle = "Dashboard";
         </ul>
         <p class="footer-info">Phone: 123-456-7890 | Address: 123 Main St. | Email: info@expert.com</p>
         <div class="footer-logo">
-          
+
           <p class="footer-copyright">Expert Training since 2023 &#169; </p>
         </div>
       </div>
@@ -143,7 +143,7 @@ $pageTitle = "Dashboard";
     </div>
   </footer>
   </div>
-    
-    
+
+
 </body>
 </html>
