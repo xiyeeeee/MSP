@@ -40,7 +40,7 @@ $pageTitle = "Dashboard";
             <a href="change_password.php">Change Password</a>
           </div>
         </li>
-        <li><a href="dashboard.php">Home <i class="fas fa-home"></i></a></li>
+        <li><a href="client.php">Home <i class="fas fa-home"></i></a></li>
         <li class="dropdown">
           <a href="#">Category <i class="fas fa-bars"></i></a>
           <div class="dropdown-content">

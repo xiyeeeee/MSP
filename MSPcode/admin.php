@@ -30,7 +30,7 @@ $pageTitle = "Dashboard";
         </li>
         <li><a href="#">Request Management<i class="fas fa-comments"></i></a></li>
         <li><a href="#">Booking Management<i class="fas fa-calendar"></i></a></li>
-        <li><a href="dashboard.php">Home <i class="fas fa-home"></i></a></li>
+        <li><a href="admin.php">Home <i class="fas fa-home"></i></a></li>
         <li class="dropdown">
           <a href="#">Category <i class="fas fa-bars"></i></a>
           <div class="dropdown-content">

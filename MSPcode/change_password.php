@@ -28,8 +28,14 @@
           </div>
         </li>
         <li><a href="#">Booking <i class="fas fa-cart-plus"></i></a></li>
-        <li><a href="profile.php">Profile <i class="fas fa-user"></i></a></li>
-        <li><a href="dashboard.php">Home <i class="fas fa-home"></i></a></li>
+        <li class="dropdown">
+          <a href="profile.php">Profile <i class="fas fa-user"></i></a>
+          <div class="dropdown-content">
+            <a href="delete_acc.php">Delete Account</a>
+            <a href="change_password.php">Change Password</a>
+          </div>
+        </li>
+        <li><a href="client.php">Home <i class="fas fa-home"></i></a></li>
         <li class="dropdown">
           <a href="#">Category <i class="fas fa-bars"></i></a>
           <div class="dropdown-content">
