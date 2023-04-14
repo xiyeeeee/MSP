@@ -454,13 +454,12 @@
         transform: translate3d(0, 100%, 0);
     }
 }
-
 /*Profile page with nav bar*/
   html, body {
     margin: 0;
     padding: 0;
   }
-  
+
   .header-container {
     position: fixed;
     top: 0;
@@ -469,7 +468,7 @@
     z-index: 100;
     background-color: white;
   }
-  
+
   .logo-container {
     display: flex;
     justify-content: space-between;
@@ -478,28 +477,28 @@
     margin: 0 auto;
     padding: 16px;
   }
-  
+
   .navbar {
     display: flex;
     align-items: center;
   }
-  
+
   .navbar ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
   }
-  
+
   .navbar li {
     position: relative;
     margin-right: 20px;
   }
-  
+
   .navbar li:last-child {
     margin-right: 0;
   }
-  
+
   .navbar li a {
     display: block;
     padding: 16px;
@@ -508,11 +507,11 @@
     font-weight: bold;
     transition: color 0.2s ease-in-out;
   }
-  
+
   .dropdown {
     position: relative;
   }
-  
+
   .dropdown .dropdown-content {
     display: none;
     position: absolute;
@@ -520,7 +519,7 @@
     z-index: 1;
     margin-top: -2px;
   }
-  
+
   .dropdown .dropdown-content a {
     color: #fff;
     padding: 16px;
@@ -528,29 +527,29 @@
     display: block;
     font-size: smaller;
   }
-  
+
   .navbar li:hover > a {
     color: #870830;
   }
-  
+
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
+
   .dropdown-content a:hover {
     color: #d891a8;
   }
-  
+
   .navbar i {
     margin-left: 8px;
   }
-  
+
   .trademark {
     font-size: 1.2rem;
     margin-left: 10px;
     color: #11204a;
   }
-  
+
   .manage_btn_menu {
     display: none;
     position: absolute;
@@ -562,41 +561,36 @@
     background-color: #fff;
   }
 
- 
+
   .active_user {
     background-color: #870830;
     color: #fff;
   }
-  
+
   .non_active_user {
     background-color: #fff;
     color: #870830;
     border: 2px solid #870830;
     margin-left: 20px;
   }
-  
+
   .btn_outputs {
     margin-top: 120px;
     padding: 16px;
   }
-  
+
   .user_table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 50px;
   }
-  
+
   .user_table th, .user_table td {
     padding: 8px;
     text-align: left;
     border: 1px solid #ddd;
   }
-  
+
   .user_table th {
     background-color: #f2f2f2;
   }
-
-  
- 
-  
-  

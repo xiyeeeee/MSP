@@ -79,7 +79,7 @@
     <br>
     <br>
     </article>
-    
+
 
     <script src="script/nav.js"></script>
     <script src="https://kit.fontawesome.com/2076012a21.js" crossorigin="anonymous"></script>
