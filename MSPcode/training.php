@@ -1,89 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Training Preview</title>
-	<style>
-		nav {
-			background-color: #333;
-			overflow: hidden;
-		}
-
-		nav a {
-			float: left;
-			color: white;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-		}
-
-		nav a:hover {
-			background-color: #ddd;
-			color: black;
-		}
-
-		.dropdown {
-			float: left;
-			overflow: hidden;
-		}
-
-		.dropdown .dropbtn {
-			cursor: pointer;
-			font-size: 16px;
-			border: none;
-			outline: none;
-			color: white;
-			padding: 14px 16px;
-			background-color: inherit;
-			font-family: inherit;
-			margin: 0;
-		}
-
-		nav a:hover, .dropdown:hover .dropbtn {
-			background-color: #ddd;
-			color: black;
-		}
-
-		.dropdown-content {
-			display: none;
-			position: absolute;
-			background-color: #f9f9f9;
-			min-width: 160px;
-			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-			z-index: 1;
-		}
-
-		.dropdown-content a {
-			float: none;
-			color: black;
-			padding: 12px 16px;
-			text-decoration: none;
-			display: block;
-			text-align: left;
-		}
-
-		.dropdown-content a:hover {
-			background-color: #ddd;
-		}
-
-		.dropdown:hover .dropdown-content {
-			display: block;
-		}
-
-	</style>
+	<link rel="stylesheet" href="css/style1.css">
+	<script src="script.js"></script>
+	<title>TRAINING: ETMP</title>
 </head>
 <body>
-	<nav>
-		<a href="#">Home</a>
-		<div class="dropdown">
-			<button class="dropbtn">Training Categories</button>
-			<div class="dropdown-content">
-				<a href="nav_search.php?category=Segmentation workshop">Segmentation workshop</a>
-				<a href="nav_search.php?category=Co-creation workshop">Co-creation workshop</a>
-				<a href="nav_search.php?category=Consumer brainstorm workshop">Consumer brainstorm workshop</a>
-                <a href="nav_search.php?category=Team activation workshop">Team activation workshop</a>
-			</div>
-		</div>
-	</nav>
+	<div class="header-container">
+  <div class="logo-container">
+    <div class="logo">
+      <h1 class="logo-text">Expert<span class="trademark">&reg;</span></h1>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="client.php">Home <i class="fas fa-home"></i></a></li>
+        <li class="dropdown">
+          <a href="training.php">Trainings <i class="fas fa-bars"></i></a>
+          <div class="dropdown-content">
+            <a href="#">Segmentation Workshop</a>
+            <a href="#">Co-Creation Workshop</a>
+            <a href="#">Consumer Brainstorm Workshop</a>
+            <a href="#">Team Activation Workshop</a>
+          </div>
+        </li>
+        <li><a href="request.php">Request <i class="fas fa-home"></i></a></li>
+        <li><a href="#">Booking <i class="fas fa-cart-plus"></i></a></li>
+        <li class="dropdown">
+          <a href="profile.php">Profile <i class="fas fa-user"></i></a>
+          <div class="dropdown-content">
+            <a href="change_password.php">Change Password</a>
+            <a href="delete_acc.php">Delete Account</a>
+          </div>
+        </li>
+        <li><a href="login.php">Logout <i class="fas fa-user-circle"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
     <form class="form-inline" action="input_search.php" method="get">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
