@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-    <?php
+<?php
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -32,11 +32,10 @@
     function createTableTraining($conn){
         $sql = "CREATE TABLE IF NOT EXISTS requests (
             name VARCHAR(30) NOT NULL,
-            email VARCHAR(50) NOT NULL,
-            address VARCHAR(256) NOT NULL,
             training VARCHAR(128) NOT NULL,
-            status VARCHAR(16) NOT NULL,
-            CONSTRAINT requests_email_unique UNIQUE (email)
+            tlocation VARCHAR(256) NOT NULL,
+            remark TEXT NOT NULL,
+            status VARCHAR(16) NOT NULL
         )";
         mysqli_query($conn, $sql);
     }
@@ -56,52 +55,54 @@
     }
 
     $trainings = array();
-    $sql = "SELECT tname FROM trainings";
+    $sql = "SELECT tname, tlocation FROM trainings";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-        $trainings[] = $row["tname"];
+        $trainings[] = array(
+            "name" => $row["tname"],
+            "location" => $row["location"]
+        );
         }
     }
 
+    $defaultLocation = "";
+    $training = "";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $_POST["name"];
-        $email = $_POST["email"];
-        $address = $_POST["address"];
         $training = $_POST["training"];
+        $location = $_POST["location"];
+        $remark = $_POST["remark"];
 
-        $nameErr = $emailErr = $addressErr = $trainingErr = "";
-        $isValid = true;
+        $nameErr = $trainingErr = $locationErr = "";
+        $isValid = true;      
 
         if (empty($name)) {
         $nameErr = "Name is required";
         $isValid = false;
         }
 
-        if (empty($_POST["email"])) {
-            $emailErr = "Email is required";
-            $isValid = false;
-        } else {
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $emailErr = "Invalid email format";
-                $isValid = false;
-            }
-        }
-
-        if (empty($address)) {
-        $addressErr = "Address is required";
-        $isValid = false;
-        }
-
         if ($training == "-") {
         $trainingErr = "Please choose Training";
         $isValid = false;
+        } else {
+            foreach ($trainings as $t) {
+                if ($t["name"] == $training) {
+                    $defaultLocation = $t["location"];
+                    break;
+                }
+            }
+        }
+
+        if ($location == "-") {
+          $locationErr = "Please choose Location";
+          $isValid = false;
         }
 
         if ($isValid) {
         $status = "pending";
-        $sql = "INSERT INTO requests (name, email, address, training, status) VALUES ('$name', '$email', '$address', '$training', '$status')";
+        $sql = "INSERT INTO requests (name, training, tlocation, remark, status) VALUES ('$name', '$training', '$location', '$remark', '$status')";
 
         if ($conn->query($sql) === TRUE) {
             echo "Your request is waiting to approve";
@@ -112,7 +113,7 @@
     }
 
     $conn->close();
-?>
+	?>
 <div class="header-container">
 <div class="logo-container">
   <div class="logo">
@@ -156,14 +157,14 @@
     <span class="error"><?php if (isset($nameErr)) { echo $nameErr; } ?></span>
     <br><br>
 
-    <label for="email">Email:</label>
-    <input type="text" name="email" id="email">
-    <span class="error"><?php if (isset($emailErr)) { echo $emailErr; } ?></span>
-    <br><br>
-
-    <label for="address">Address:</label>
-    <input type="text" name="address" id="address">
-    <span class="error"><?php if (isset($addressErr)) { echo $addressErr; } ?></span>
+	<label for="location">Location:</label>
+	<select name="location" id="location">
+		<option value="">- Select Location -</option>
+		<option value="123 Main St.">123 Main St.</option>
+		<option value="456 Oak Ave.">456 Oak Ave.</option>
+		<option value="789 Elm Blvd.">789 Elm Blvd.</option>
+		<option value="1011 Maple Rd.">1011 Maple Rd.</option>
+	</select>
     <br><br>
 
     <label for="training">Training:</label>
@@ -176,7 +177,32 @@
     <span class="error"><?php if (isset($trainingErr)) { echo $trainingErr; } ?></span>
     <br><br>
 
+	<label for="remark">Remark:</label>
+    <textarea name="remark" id="remark"></textarea>
+    <br><br>
+
 <input type="submit" value="submit">
+
+<script>
+  var trainingSelect = document.getElementById("training");
+  var locationSelect = document.getElementById("location");
+
+  trainingSelect.addEventListener("change", function() {
+    var training = trainingSelect.value;
+
+    if (training == "Target market segmentation workshop") {
+      locationSelect.value = "123 Main St.";
+      locationSelect.disabled = true;
+    } else if (training == "Customer experience improvement seminar") {
+      locationSelect.value = "456 Oak Ave.";
+      locationSelect.disabled = true;
+    } else {
+      locationSelect.value = "";
+      locationSelect.disabled = false;
+    }
+  });
+</script>
+
 </form>
 </body>
 </html>
