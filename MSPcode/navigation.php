@@ -21,6 +21,7 @@ echo '<a href="change_password.php">Change Password</a>';
 echo '<a href="delete_acc.php">Delete Account</a>';
 echo '</div>';
 echo '</li>';
+echo '<li><a href="#">Chat<i class="fas fa-comments"></i></a></li>';
 echo '<li><a href="login.php">Logout <i class="fas fa-user-circle"></i></a></li>';
 echo '</ul>';
 echo '</nav>';

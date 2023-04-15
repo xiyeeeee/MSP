@@ -7,14 +7,10 @@ $pageTitle = "Dashboard";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="script.js"></script>
-
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-
 </head>
 <body>
 
@@ -25,21 +21,13 @@ $pageTitle = "Dashboard";
     </div>
     <nav class="navbar">
       <ul>
-        <li class="dropdown">
-          <a href="#">Training Management<i class="fas fa-bicycle"></i></a>
-        </li>
-        <li><a href="#">Request Management<i class="fas fa-comments"></i></a></li>
-        <li><a href="#">Booking Management<i class="fas fa-calendar"></i></a></li>
         <li><a href="admin.php">Home <i class="fas fa-home"></i></a></li>
         <li class="dropdown">
-          <a href="#">Category <i class="fas fa-bars"></i></a>
-          <div class="dropdown-content">
-            <a href="#">Category 1</a>
-            <a href="#">Category 2</a>
-            <a href="#">Category 3</a>
-            <a href="#">Category 4</a>
-          </div>
+          <a href="#">Training Management<i class="fas fa-bars"></i></a>
         </li>
+        <li><a href="#">Request Management<i class="fas fa-bell"></i></a></li>
+        <li><a href="#">Booking Management<i class="fas fa-calendar"></i></a></li>
+        <li><a href="#">Chat<i class="fas fa-comments"></i></a></li>
         <li class="navbar-item"><a href="login.php">Logout <i class="fas fa-user-circle"></i></a></li>
       </ul>
     </nav>
