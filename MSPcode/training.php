@@ -24,7 +24,7 @@
             <a href="#">Team Activation Workshop</a>
           </div>
         </li>
-        <li><a href="request.php">Request <i class="fas fa-home"></i></a></li>
+        <li><a href="request.php">Request <i class="fas fa-bell"></i></a></li>
         <li><a href="#">Booking <i class="fas fa-cart-plus"></i></a></li>
         <li class="dropdown">
           <a href="profile.php">Profile <i class="fas fa-user"></i></a>

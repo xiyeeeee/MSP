@@ -463,7 +463,7 @@
 .center{
   text-align: center;
 }
-form {
+form.container {
   max-width: 500px;
   margin: 0 auto;
   font-family: Arial, sans-serif;

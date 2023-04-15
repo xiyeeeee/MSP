@@ -20,7 +20,7 @@
     </div>
     <nav class="navbar">
       <ul>
-        <li><a href="client.php">Home <i class="fas fa-home"></i></a></li>
+        <li><a href="request.php">Request <i class="fas fa-bell"></i></a></li>
         <li class="dropdown">
           <a href="training.php">Trainings <i class="fas fa-bars"></i></a>
           <div class="dropdown-content">
