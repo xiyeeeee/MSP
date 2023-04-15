@@ -18,30 +18,7 @@
     <div class="logo">
       <h1 class="logo-text">Expert<span class="trademark">&reg;</span></h1>
     </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="client.php">Home <i class="fas fa-home"></i></a></li>
-        <li class="dropdown">
-          <a href="training.php">Trainings <i class="fas fa-bars"></i></a>
-          <div class="dropdown-content">
-            <a href="#">Segmentation Workshop</a>
-            <a href="#">Co-Creation Workshop</a>
-            <a href="#">Consumer Brainstorm Workshop</a>
-            <a href="#">Team Activation Workshop</a>
-          </div>
-        </li>
-        <li><a href="request.php">Request <i class="fas fa-home"></i></a></li>
-        <li><a href="#">Booking <i class="fas fa-cart-plus"></i></a></li>
-        <li class="dropdown">
-          <a href="profile.php">Profile <i class="fas fa-user"></i></a>
-          <div class="dropdown-content">
-            <a href="change_password.php">Change Password</a>
-            <a href="delete_acc.php">Delete Account</a>
-          </div>
-        </li>
-        <li><a href="login.php">Logout <i class="fas fa-user-circle"></i></a></li>
-      </ul>
-    </nav>
+  <?php include 'navigation.php';?>
   </div>
 </div>
 <br>
