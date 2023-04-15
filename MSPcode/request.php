@@ -5,7 +5,8 @@
 	<script src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
-<body>
+<body id="reqbg">
+
 <?php
     $servername = "localhost";
     $username = "root";
@@ -76,7 +77,7 @@
         $remark = $_POST["remark"];
 
         $nameErr = $trainingErr = $locationErr = "";
-        $isValid = true;      
+        $isValid = true;
 
         if (empty($name)) {
         $nameErr = "Name is required";
@@ -150,23 +151,12 @@
 <br>
 <br>
 <br>
-  <h2>Client Request Form</h2>
+
   <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <h2 class="center">Client Request Form</h2>
     <label for="name">Name:</label>
     <input type="text" name="name" id="name">
     <span class="error"><?php if (isset($nameErr)) { echo $nameErr; } ?></span>
-    <br><br>
-
-	<label for="location">Location:</label>
-	<select name="location" id="location">
-		<option value="">- Select Location -</option>
-		<option value="123 Main St.">123 Main St.</option>
-		<option value="456 Oak Ave.">456 Oak Ave.</option>
-		<option value="789 Elm Blvd.">789 Elm Blvd.</option>
-		<option value="1011 Maple Rd.">1011 Maple Rd.</option>
-	</select>
-    <br><br>
-
     <label for="training">Training:</label>
     <select name="training" id="training">
     <option value="-">-</option>
@@ -176,12 +166,20 @@
     </select>
     <span class="error"><?php if (isset($trainingErr)) { echo $trainingErr; } ?></span>
     <br><br>
-
+    <label for="location">Location:</label>
+    <select name="location" id="location">
+      <option value="">- Select Location -</option>
+      <option value="123 Main St.">123 Main St.</option>
+      <option value="456 Oak Ave.">456 Oak Ave.</option>
+      <option value="789 Elm Blvd.">789 Elm Blvd.</option>
+      <option value="1011 Maple Rd.">1011 Maple Rd.</option>
+    </select>
+    <br><br>
 	<label for="remark">Remark:</label>
     <textarea name="remark" id="remark"></textarea>
-    <br><br>
 
-<input type="submit" value="submit">
+
+<input type="Submit" value="Submit">
 
 <script>
   var trainingSelect = document.getElementById("training");
@@ -204,5 +202,6 @@
 </script>
 
 </form>
+<br><br>
 </body>
 </html>

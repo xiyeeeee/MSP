@@ -15,6 +15,11 @@
   background: rgba(0, 0, 0, 0.5)url(../img/profile.jpg) no-repeat center center fixed;
   background-size: cover;
 }
+#reqbg{
+  background: rgba(0, 0, 0, 0.5)url(../img/reqbg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: darken;
+}
 /*REGISTER*/
 .register_section{
     position: relative;
@@ -453,6 +458,61 @@
         opacity: 0;
         transform: translate3d(0, 100%, 0);
     }
+}
+/*Request*/
+.center{
+  text-align: center;
+}
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"]{
+  width: 480px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f0f0f0;
+  font-size: 16px;
+}
+
+textarea {
+  height: 150px;
+  width: 480px;
+}
+
+input[type="submit"] {
+  display: block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
 }
 /*Profile page with nav bar*/
   html, body {
