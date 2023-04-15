@@ -13,16 +13,16 @@ if (isset($_POST["submit"])){
     if (emptyInputLogin($username, $pwd) !== false){
         header("location: ../login.php?error=emptyinput");
         exit();
-    } elseif ($usertype == 'admin'){
-      if ($username == $adname && $pwd == $adpass){
+    } elseif ($username == $adname && $pwd == $adpass){
         header("location: ../admin.php");
         exit();
-      } else {
-        header("location: ../login.php?error=wronglogin");
-        exit();
-      }
+      } 
+  
+    if(loginUser($conn, $username, $pwd)){
+    }else {
+      header("location: ../login.php?error=wronglogin");
+      exit();
     }
-    loginUser($conn, $username, $pwd);
 } else {
     header("location: ../login.php");
     exit();
