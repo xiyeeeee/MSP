@@ -9,7 +9,7 @@ $pageTitle = "Dashboard";
 <head>
 
     <title>CLIENT: ETMP</title>
-    <link rel="stylesheet" type="text/css" href="css/db.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="script.js"></script>
 
 
