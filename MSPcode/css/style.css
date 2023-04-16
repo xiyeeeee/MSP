@@ -518,6 +518,7 @@ input[type="submit"]:hover {
   body {
     font-family: Arial, sans-serif;
     color: #dbd3d3;
+    
     margin: 0;
     padding: 0;
 
@@ -624,6 +625,35 @@ input[type="submit"]:hover {
     color: #11204a;
   }
 
+ /* .dashboard-container {
+    background-color: #11204a;
+    color: #11204a;
+    
+  }
+
+  .dashboard {
+    display: grid;
+    grid-gap: 30px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+    height: 100vh;
+    /*margin: 0;
+    
+    background-color: #11204a;
+    color: #11204a;
+    padding: 120px 20px 250px;
+    padding-bottom: 500px;
+    position: relative;
+    top: 80px;
+    height: 200px;
+
+
+  }*/
+
+  .dashboard-container
+  {
+    background-color: #11204a;
+  }
   .dashboard {
     display: grid;
     grid-gap: 30px 20px;

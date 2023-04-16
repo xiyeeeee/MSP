@@ -14,6 +14,7 @@ $pageTitle = "Dashboard";
 </head>
 <body>
 
+<div class="dashboard-container">
       <div class="header-container">
   <div class="logo-container">
     <div class="logo">
@@ -182,7 +183,7 @@ $pageTitle = "Dashboard";
     </div>
   </footer>
   </div>
-
+  </div>
 
 </body>
 </html>

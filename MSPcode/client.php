@@ -17,6 +17,7 @@ $pageTitle = "Dashboard";
 
 </head>
 <body>
+<div class= "dashboard-container">
   <div class="header-container">
   <div class="logo-container">
     <div class="logo">
@@ -26,6 +27,7 @@ $pageTitle = "Dashboard";
   </div>
   </div>
 
+  
     <div class="dashboard">
         <a href="test.html">
         <div class="category">
@@ -81,6 +83,7 @@ $pageTitle = "Dashboard";
 
 
       </div>
+      
       <div class="new-section">
         <div class="left-column">
         <p>Introduction of the company. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel viverra diam, eu luctus odio. Sed sed aliquam leo. Nam commodo augue sit amet neque varius vehicula. Nunc laoreet dolor nec nunc suscipit, vel porttitor ipsum laoreet. Fusce maximus suscipit pretium. Duis a enim at turpis dignissim maximus. Nullam congue erat ut diam hendrerit, nec convallis turpis bibendum. Donec ultrices, neque id aliquet malesuada, urna augue sodales lectus, eu porttitor urna leo at orci. Pellentesque fringilla finibus ex, id scelerisque lectus dignissim et.</p>
@@ -118,6 +121,7 @@ $pageTitle = "Dashboard";
       </div>
     </div>
   </footer>
+  </div>
   </div>
 
 
