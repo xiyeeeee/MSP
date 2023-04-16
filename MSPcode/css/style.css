@@ -873,3 +873,179 @@ input[type="submit"]:hover {
   .footer-copyright {
   margin-left: auto;
   }
+
+  /*Payment successful*/
+  .payment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    background-color: #F5F5F5;
+    border: 5px solid #11204a;
+    border-radius: 10px;
+  }
+  
+  .payment-alert {
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    color: #11204a;
+  }
+  
+  .payment-msg {
+    font-size: 22px;
+    margin: 20px 0;
+    padding-top: 20px;
+    color: #11204a;
+  }
+  
+  .select-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .abutton {
+    background-color: #0d2945;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 55px;
+    margin-right: 55px;
+  }
+  
+  .abutton:hover {
+    background-color: #F5F5F5;
+    color: #7f0909;
+    border: 2px solid #7f0909;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /*Payment failed*/
+  .failed-payment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .box2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    height: 50%;
+    background-color: #F5F5F5;
+    border: 5px solid #11204a;
+    border-radius: 10px;
+  }
+  
+  .fpayment-alert {
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    color: #11204a;
+  }
+  
+  .fpayment-msg {
+    font-size: 18px;
+    margin: 20px 0;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 20px;
+    color: #11204a;
+  }
+  
+  .fselect-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .fbutton {
+    background-color: #0d2945;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 65px;
+    margin-right: 95px;
+  }
+  
+  .fbutton:hover {
+    background-color: #F5F5F5;
+    color: #7f0909;
+    border: 2px solid #7f0909;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /*Payment Landing Page*/
+ 
+  .landing-container {
+    max-width: 800px;
+    margin-top: 50px;
+    padding: 20px;
+  }
+  .landing-product {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .product-description{
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .product {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .product img {
+    margin-right: 50px;
+    max-width: 100%;
+  }
+  .description h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  .description h5 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  #checkout-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0d2945;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  #checkout-button:hover {
+    background-color: #F5F5F5;
+    color: #7f0909;
+    border: 2px solid #7f0909;
+  }
+  

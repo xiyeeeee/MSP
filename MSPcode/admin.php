@@ -1,13 +1,13 @@
 <?php
 // Define a variable for the page title
-$pageTitle = "Dashboard";
+$pageTitle = "Admin Dashboard";
 ?>
 
 <!-- Start of HTML code -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Dashboard</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="script.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
