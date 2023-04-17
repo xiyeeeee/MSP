@@ -28,8 +28,9 @@
     <img class="image" src="img/brain1.jpg" alt="Training 1">
     <div class="training-info">
     <h3>Consumer Insight Brainstorm Workshop</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend, urna id eleifend aliquet, ex purus sollicitudin lectus, eu lobortis sapien lectus vel ex.</p>
-    <p>Location: </p>
+    <p>A creative session that brings together businesses and stakeholders to generate new ideas and insights into their target customers. The workshop aims to help businesses understand their customers better and develop solutions that meet their needs and preferences.</p>
+    <p>Location: Swinburne Sarawak</p>
+    <p>Price: RM80.00</p>
     <button onclick="autofill('The International 7')">Enquire Now</button>
   </div>
   </div>
@@ -39,8 +40,9 @@
     <img class="image" src="img/brain2.webp" alt="Training 2">
     <div class="training-info">
     <h3>Product Demand Brainstorm Workshop</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend, urna id eleifend aliquet, ex purus sollicitudin lectus, eu lobortis sapien lectus vel ex.</p>
-    <p>Location: </p>
+    <p>A collaborative session that brings together businesses and stakeholders to generate new ideas and insights into product demand. The workshop aims to help businesses understand the market demand for their products and identify opportunities for growth.</p>
+    <p>Location: BCCK</p>
+    <p>Price: RM90.00</p>
     <button onclick="autofill('The International 7')">Enquire Now</button>
   </div>
   </div>
@@ -50,8 +52,9 @@
     <img class="image" src="img/brain3.png" alt="Training 3">
     <div class="training-info">
     <h3>Marketing Creative Brainstorm Workshop</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend, urna id eleifend aliquet, ex purus sollicitudin lectus, eu lobortis sapien lectus vel ex.</p>
-    <p>Location: </p>
+    <p>A collaborative session that brings together businesses and stakeholders to generate new ideas and creative solutions for marketing campaigns. The workshop aims to help businesses create compelling and effective marketing strategies that resonate with their target audience and drive business growth.</p>
+    <p>Location: MBKS</p>
+    <p>Price: RM100.00</p>
     <button onclick="autofill('The International 7')">Enquire Now</button>
   </div>
   </div>

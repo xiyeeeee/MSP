@@ -28,8 +28,9 @@
     <img class="image" src="img/co1.jpg" alt="Training 1">
     <div class="training-info">
     <h3>Product Innovation Co-Creation Workshop</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend, urna id eleifend aliquet, ex purus sollicitudin lectus, eu lobortis sapien lectus vel ex.</p>
-    <p>Location: </p>
+    <p>A collaborative session that brings together businesses, customers, and other stakeholders to generate new ideas and develop innovative products or services. The workshop aims to help businesses understand their customers better and create solutions that meet their needs and preferences.</p>
+    <p>Location: Swinburne Sarawak</p>
+    <p>Price: RM80.00</p>
     <button onclick="autofill('The International 7')">Enquire Now</button>
   </div>
   </div>
@@ -39,8 +40,9 @@
     <img class="image" src="img/co2.png" alt="Training 2">
     <div class="training-info">
     <h3>Service Experience Co-Creation Workshop</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend, urna id eleifend aliquet, ex purus sollicitudin lectus, eu lobortis sapien lectus vel ex.</p>
-    <p>Location: </p>
+    <p>A collaborative session that brings together businesses, customers, and other stakeholders to design and develop innovative service experiences that meet the needs and preferences of customers. The workshop aims to help businesses understand their customers better and create solutions that provide exceptional customer experiences.</p>
+    <p>Location: BCCK</p>
+    <p>Price: RM90.00</p>
     <button onclick="autofill('The International 7')">Enquire Now</button>
   </div>
   </div>
@@ -50,8 +52,9 @@
     <img class="image" src="img/co3.jpg" alt="Training 3">
     <div class="training-info">
     <h3>Brand Storytelling Co-Creation Workshop</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend, urna id eleifend aliquet, ex purus sollicitudin lectus, eu lobortis sapien lectus vel ex.</p>
-    <p>Location: </p>
+    <p>A collaborative session that brings together businesses, customers, and other stakeholders to create a compelling brand story that resonates with their target audience. The workshop aims to help businesses understand their customers better and develop a strong brand identity that connects with their values and aspirations.</p>
+    <p>Location: MBKS</p>
+    <p>Price: RM100.00</p>
     <button onclick="autofill('The International 7')">Enquire Now</button>
   </div>
   </div>

@@ -303,7 +303,7 @@
 
 .training-item img {
   width: 300px;
-  height: 250px;
+  height: 350px;
   object-fit: cover;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -315,6 +315,7 @@
   flex: 1;
   float: right;
   color: black;
+  text-align: justify;
 }
 
 .training-item h3 {
