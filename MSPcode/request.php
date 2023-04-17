@@ -132,13 +132,16 @@
   <form class="container" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <h2 class="center">Client Request Form</h2>
     <label for="name">Name:</label>
-    <input type="text" name="name" id="name">
     <br>
     <br>
     <span class="error"><?php if (isset($nameErr)) { echo $nameErr; } ?></span>
     <label for="training">Training Category:</label>
-    <select name="training" id="training">
-    <option value="-">-</option>
+    <select name="location" id="location">
+      <option value="">Select</option>
+      <option value="Segmentation Workshop">Segmentation Workshop</option>
+      <option value="Co-Creation Workshop">Co-Creation Workshop</option>
+      <option value="Consumer Brainstorm Workshop">Consumer Brainstorm Workshop</option>
+      <option value="Team Activation Workshop">Team Activation Workshop</option>
     <?php foreach ($trainings as $t): ?>
         <option value="<?php echo $t; ?>"><?php echo $t; ?></option>
     <?php endforeach; ?>
@@ -172,13 +175,6 @@
     <span class="error"><?php if (isset($trainingErr)) { echo $trainingErr; } ?></span>
     <br><br>
     <label for="location">Location:</label>
-    <select name="location" id="location">
-      <option value="">- Select Location -</option>
-      <option value="123 Main St.">123 Main St.</option>
-      <option value="456 Oak Ave.">456 Oak Ave.</option>
-      <option value="789 Elm Blvd.">789 Elm Blvd.</option>
-      <option value="1011 Maple Rd.">1011 Maple Rd.</option>
-    </select>
     <br><br>
 	<label for="remark">Remark:</label>
     <textarea name="remark" id="remark"></textarea>
