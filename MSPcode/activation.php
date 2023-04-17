@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	<title>TRAINING: ETMP</title>
 </head>
-<body>
+<body id="actbg">
 <div class= "dashboard-container">
   <div class="header-container">
   <div class="logo-container">
@@ -16,5 +16,49 @@
   </div>
   </div>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <section class="training">
+  <div class="training-item">
+    <img class="image" src="img/act1.webp" alt="Training 1">
+    <div class="training-info">
+    <h3>Team Collaboration Activation Workshop</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend, urna id eleifend aliquet, ex purus sollicitudin lectus, eu lobortis sapien lectus vel ex.</p>
+    <p>Location: </p>
+    <button onclick="autofill('The International 7')">Enquire Now</button>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="training-item">
+    <img class="image" src="img/act2.jpg" alt="Training 2">
+    <div class="training-info">
+    <h3>Team Culture Activation Workshop</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend, urna id eleifend aliquet, ex purus sollicitudin lectus, eu lobortis sapien lectus vel ex.</p>
+    <p>Location: </p>
+    <button onclick="autofill('The International 7')">Enquire Now</button>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="training-item">
+    <img class="image" src="img/act3.jpg" alt="Training 3">
+    <div class="training-info">
+    <h3>Team Decision-Making Activation Workshop</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend, urna id eleifend aliquet, ex purus sollicitudin lectus, eu lobortis sapien lectus vel ex.</p>
+    <p>Location: </p>
+    <button onclick="autofill('The International 7')">Enquire Now</button>
+  </div>
+  </div>
+  <br>
+  <br>
+</section>
+<br>
+<br>
 </body>
 </html>

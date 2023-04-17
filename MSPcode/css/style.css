@@ -10,7 +10,26 @@
   background-size: cover;
   background-blend-mode: darken;
 }
-
+#actbg{
+  background: rgba(0, 0, 0, 0.5)url(../img/actbg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+#brainbg{
+  background: rgba(0, 0, 0, 0.5)url(../img/brainbg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+#ccbg{
+  background: rgba(0, 0, 0, 0.5)url(../img/ccbg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+#segbg{
+  background: rgba(0, 0, 0, 0.5)url(../img/segbg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: darken;
+}
 #profilebg{
   background: rgba(0, 0, 0, 0.5)url(../img/profile.jpg) no-repeat center center fixed;
   background-size: cover;
@@ -265,6 +284,50 @@
     text-transform: uppercase;
     font-weight: 600;
     text-align: center;
+}
+/*Training*/
+.training {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.training-item {
+  max-width: 800px;
+  margin: 20px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+}
+
+.training-item img {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  float: left;
+}
+
+.training-info {
+  padding: 20px;
+  flex: 1;
+  float: right;
+  color: black;
+}
+
+.training-item h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.training-item p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: black;
 }
 /*Profile*/
 .user_table{
