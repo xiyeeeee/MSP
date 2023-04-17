@@ -133,13 +133,41 @@
     <h2 class="center">Client Request Form</h2>
     <label for="name">Name:</label>
     <input type="text" name="name" id="name">
+    <br>
+    <br>
     <span class="error"><?php if (isset($nameErr)) { echo $nameErr; } ?></span>
-    <label for="training">Training:</label>
+    <label for="training">Training Category:</label>
     <select name="training" id="training">
     <option value="-">-</option>
     <?php foreach ($trainings as $t): ?>
         <option value="<?php echo $t; ?>"><?php echo $t; ?></option>
     <?php endforeach; ?>
+    </select>
+    <span class="error"><?php if (isset($trainingErr)) { echo $trainingErr; } ?></span>
+    <br><br>
+    <label for="training">Training:</label>
+    <select name="training" id="training">
+      <option value="">Select</option>
+      <optgroup label="Segmentation Workshop">
+          <option value="Target Market Segmentation Workshop">Target Market Segmentation Workshop</option>
+          <option value="User Persona Segmentation Workshop">User Persona Segmentation Workshop</option>
+          <option value="Product Positioning Segmentation Workshop">Product Positioning Segmentation Workshop</option>
+      </optgroup>
+      <optgroup label="Co-Creation Workshop">
+          <option value="Product Innovation Co-Creation Workshop">Product Innovation Co-Creation Workshop</option>
+          <option value="Service Experience Co-Creation Workshop">Service Experience Co-Creation Workshop</option>
+          <option value="Brand Storytelling Co-Creation Workshop">Brand Storytelling Co-Creation Workshop</option>
+      </optgroup>
+      <optgroup label="Consumer Brainstorm Workshop">
+          <option value="Consumer Insight Brainstorm Workshop">Consumer Insight Brainstorm Workshop</option>
+          <option value="Product Demand Brainstorm Workshop">Product Demand Brainstorm Workshop</option>
+          <option value="Marketing Creative Brainstorm Workshop">Marketing Creative Brainstorm Workshop</option>
+      </optgroup>
+      <optgroup label="Team Activation Workshop">
+          <option value="Team Collaboration Activation Workshop">Team Collaboration Activation Workshop</option>
+          <option value="Team Culture Activation Workshop">Team Culture Activation Workshop</option>
+          <option value="Team Decision-Making Activation Workshop">Team Decision-Making Activation Workshop</option>
+      </optgroup>
     </select>
     <span class="error"><?php if (isset($trainingErr)) { echo $trainingErr; } ?></span>
     <br><br>
