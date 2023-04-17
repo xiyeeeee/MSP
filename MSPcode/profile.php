@@ -26,6 +26,11 @@
   </div>
 
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </article>
 <section class="my-section">
 <div class= "btn_outputs">
@@ -40,7 +45,7 @@
             echo "<th>Name</th>";
             echo "<th>Email</th>";
             echo "<th>Username</th>";
-            echo "<th>Delete</th>";
+            echo "<th>Registered Date</th>";
             echo "</tr>";
             echo "</thead>";
             echo "<tbody>";
@@ -55,7 +60,6 @@
                     echo "<td>";
                     echo '<input type="hidden" name="selected_user_id" value="' . $row["usersId"] . '"/>';
                     echo '<input type="hidden" name="selected_user_name" value="' . $row["usersUid"] . '"/>';
-                    echo '<button type="submit" name="delete">Delete</button>';
                     echo '</form>';
                     echo "</td>";
                     echo "</tr>";

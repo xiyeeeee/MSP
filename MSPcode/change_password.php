@@ -26,8 +26,6 @@
 <br>
 <br>
 <br>
-
-
         <div class="change-password-form">
             <h2>Change Password</h2>
             <form action="includes/change_pw.inc.php" method="post">
@@ -59,10 +57,7 @@
                 }
             ?>
         </div>
-
-
     </article>
-
     <script src="script/nav.js"></script>
     <script src="script/manage.js"></script>
     <script src="https://kit.fontawesome.com/2076012a21.js" crossorigin="anonymous"></script>

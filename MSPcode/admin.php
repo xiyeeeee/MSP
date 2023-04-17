@@ -20,18 +20,7 @@ $pageTitle = "Admin Dashboard";
     <div class="logo">
       <h1 class="logo-text">Expert<span class="trademark">&reg;</span></h1>
     </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="admin.php">Home <i class="fas fa-home"></i></a></li>
-        <li class="dropdown">
-          <a href="#">Training Management<i class="fas fa-bars"></i></a>
-        </li>
-        <li><a href="#">Request Management<i class="fas fa-bell"></i></a></li>
-        <li><a href="#">Booking Management<i class="fas fa-calendar"></i></a></li>
-        <li><a href="#">Chat<i class="fas fa-comments"></i></a></li>
-        <li class="navbar-item"><a href="login.php">Logout <i class="fas fa-user-circle"></i></a></li>
-      </ul>
-    </nav>
+      <?php include 'adminNav.php';?>
   </div>
 </div>
 
