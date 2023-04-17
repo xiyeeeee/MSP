@@ -13,7 +13,7 @@ $pageTitle = "Admin Dashboard";
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-
+<button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
 <div class="dashboard-container">
       <div class="header-container">
   <div class="logo-container">
@@ -80,7 +80,7 @@ $pageTitle = "Admin Dashboard";
 
       </div>-->
       <div class="dashboard">
-        <a href="test.html">
+        <a href="manage_training.php">
         <div class="category">
           <div class="slideshow">
             <img src="./img/volleyball.jpg">
@@ -92,38 +92,38 @@ $pageTitle = "Admin Dashboard";
     </a>
 
 
-    <a href="test.html">
+    <a href="manage_request.php">
         <div class="category">
           <div class="slideshow">
             <img src="./img/paymenthd.jpg">
 
             <img src="./img/paymenthd2.png">
           </div>
-          <h2 class= my-heading >Payment</h2>
+          <h2 class= my-heading >Request</h2>
         </div>
         </a>
 
 
-        <a href="test.html">
+        <a href="#">
         <div class="category">
           <div class="slideshow">
 
             <img src="./img/ChatManagement2.png">
             <img src="./img/livechat.jpeg">
           </div>
-          <h2 class= my-heading>Chat with us</h2>
+          <h2 class= my-heading>Chat</h2>
         </div>
     </a>
 
 
-        <a href="test.html">
+        <a href="#">
         <div class="category">
           <div class="slideshow">
             <img src="./img/itinerary.png">
 
             <img src="./img/itinerary2.png">
           </div>
-          <h2 class= my-heading>Itinerary</h2>
+          <h2 class= my-heading>Booking</h2>
         </div>
     </a>
 
@@ -173,6 +173,6 @@ $pageTitle = "Admin Dashboard";
   </footer>
   </div>
   </div>
-
+<script src="script/buttontop.js"></script>
 </body>
 </html>

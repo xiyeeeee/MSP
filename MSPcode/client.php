@@ -17,6 +17,7 @@ $pageTitle = "Dashboard";
 
 </head>
 <body>
+  <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
 <div class= "dashboard-container">
   <div class="header-container">
   <div class="logo-container">
@@ -26,10 +27,8 @@ $pageTitle = "Dashboard";
     <?php include 'navigation.php';?>
   </div>
   </div>
-
-  
     <div class="dashboard">
-        <a href="test.html">
+        <a href="training.php">
         <div class="category">
           <div class="slideshow">
             <img src="./img/volleyball.jpg">
@@ -41,49 +40,45 @@ $pageTitle = "Dashboard";
     </a>
 
 
-    <a href="test.html">
+    <a href="request.php">
         <div class="category">
           <div class="slideshow">
             <img src="./img/paymenthd.jpg">
 
             <img src="./img/paymenthd2.png">
           </div>
-          <h2 class= my-heading >Payment</h2>
+          <h2 class= my-heading >Request</h2>
         </div>
         </a>
 
 
-        <a href="test.html">
+        <a href="#">
         <div class="category">
           <div class="slideshow">
 
             <img src="./img/ChatManagement2.png">
             <img src="./img/livechat.jpeg">
           </div>
-          <h2 class= my-heading>Chat with us</h2>
+          <h2 class= my-heading>Chat</h2>
         </div>
     </a>
 
 
-        <a href="test.html">
+        <a href="payment_landing.php">
         <div class="category">
           <div class="slideshow">
             <img src="./img/itinerary.png">
 
             <img src="./img/itinerary2.png">
           </div>
-          <h2 class= my-heading>Itinerary</h2>
+          <h2 class= my-heading>Payment</h2>
         </div>
     </a>
-
         <br>
         <br>
         <br>
-
-
-
       </div>
-      
+
       <div class="new-section">
         <div class="left-column">
         <p>Introduction of the company. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel viverra diam, eu luctus odio. Sed sed aliquam leo. Nam commodo augue sit amet neque varius vehicula. Nunc laoreet dolor nec nunc suscipit, vel porttitor ipsum laoreet. Fusce maximus suscipit pretium. Duis a enim at turpis dignissim maximus. Nullam congue erat ut diam hendrerit, nec convallis turpis bibendum. Donec ultrices, neque id aliquet malesuada, urna augue sodales lectus, eu porttitor urna leo at orci. Pellentesque fringilla finibus ex, id scelerisque lectus dignissim et.</p>
@@ -124,6 +119,6 @@ $pageTitle = "Dashboard";
   </div>
   </div>
 
-
+<script src="script/buttontop.js"></script>
 </body>
 </html>
