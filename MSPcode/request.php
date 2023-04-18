@@ -135,46 +135,150 @@
     <br>
     <br>
     <span class="error"><?php if (isset($nameErr)) { echo $nameErr; } ?></span>
-    <label for="training">Training Category:</label>
-    <select name="location" id="location">
-      <option value="">Select</option>
-      <option value="Segmentation Workshop">Segmentation Workshop</option>
-      <option value="Co-Creation Workshop">Co-Creation Workshop</option>
-      <option value="Consumer Brainstorm Workshop">Consumer Brainstorm Workshop</option>
-      <option value="Team Activation Workshop">Team Activation Workshop</option>
-    <?php foreach ($trainings as $t): ?>
-        <option value="<?php echo $t; ?>"><?php echo $t; ?></option>
-    <?php endforeach; ?>
-    </select>
     <span class="error"><?php if (isset($trainingErr)) { echo $trainingErr; } ?></span>
     <br><br>
     <label for="training">Training:</label>
     <select name="training" id="training">
-      <option value="">Select</option>
+      <option value="">-</option>
       <optgroup label="Segmentation Workshop">
-          <option value="Target Market Segmentation Workshop">Target Market Segmentation Workshop</option>
-          <option value="User Persona Segmentation Workshop">User Persona Segmentation Workshop</option>
-          <option value="Product Positioning Segmentation Workshop">Product Positioning Segmentation Workshop</option>
+      <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "expert_db";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            // Get trainings with the desired tCategory values
+            $sql = "SELECT tName FROM trainings WHERE tCategory IN ('Segmentation Workshop')";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                // Output each training as an option in the dropdown menu
+                while($row = $result->fetch_assoc()) {
+                    echo "<option value='" . $row['tName'] . "'>" . $row['tName'] . "</option>";
+                }
+            }else {
+              echo '<option value="-">-</option>';
+            }
+
+            // Close database connection
+            $conn->close();
+      ?>
       </optgroup>
       <optgroup label="Co-Creation Workshop">
-          <option value="Product Innovation Co-Creation Workshop">Product Innovation Co-Creation Workshop</option>
-          <option value="Service Experience Co-Creation Workshop">Service Experience Co-Creation Workshop</option>
-          <option value="Brand Storytelling Co-Creation Workshop">Brand Storytelling Co-Creation Workshop</option>
+      <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "expert_db";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            // Get trainings with the desired tCategory values
+            $sql = "SELECT tName FROM trainings WHERE tCategory IN ('Co-Creation Workshop')";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                // Output each training as an option in the dropdown menu
+                while($row = $result->fetch_assoc()) {
+                    echo "<option value='" . $row['tName'] . "'>" . $row['tName'] . "</option>";
+                }
+            }else {
+              echo '<option value="-">-</option>';
+            }
+
+            // Close database connection
+            $conn->close();
+      ?>
       </optgroup>
       <optgroup label="Consumer Brainstorm Workshop">
-          <option value="Consumer Insight Brainstorm Workshop">Consumer Insight Brainstorm Workshop</option>
-          <option value="Product Demand Brainstorm Workshop">Product Demand Brainstorm Workshop</option>
-          <option value="Marketing Creative Brainstorm Workshop">Marketing Creative Brainstorm Workshop</option>
+      <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "expert_db";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            // Get trainings with the desired tCategory values
+            $sql = "SELECT tName FROM trainings WHERE tCategory IN ('Consumer Brainstorm Workshop')";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                // Output each training as an option in the dropdown menu
+                while($row = $result->fetch_assoc()) {
+                    echo "<option value='" . $row['tName'] . "'>" . $row['tName'] . "</option>";
+                }
+            }else {
+              echo '<option value="-">-</option>';
+            }
+
+            // Close database connection
+            $conn->close();
+      ?>
       </optgroup>
       <optgroup label="Team Activation Workshop">
-          <option value="Team Collaboration Activation Workshop">Team Collaboration Activation Workshop</option>
-          <option value="Team Culture Activation Workshop">Team Culture Activation Workshop</option>
-          <option value="Team Decision-Making Activation Workshop">Team Decision-Making Activation Workshop</option>
+      <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "expert_db";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            // Get trainings with the desired tCategory values
+            $sql = "SELECT tName FROM trainings WHERE tCategory IN ('Team Activation Workshop')";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                // Output each training as an option in the dropdown menu
+                while($row = $result->fetch_assoc()) {
+                    echo "<option value='" . $row['tName'] . "'>" . $row['tName'] . "</option>";
+                }
+            }else {
+              echo '<option value="-">-</option>';
+            }
+
+            // Close database connection
+            $conn->close();
+      ?>
       </optgroup>
     </select>
     <span class="error"><?php if (isset($trainingErr)) { echo $trainingErr; } ?></span>
     <br><br>
     <label for="location">Location:</label>
+    <select name="location" id="location">
+      <option value="">Select</option>
+      <option value="123 Main St.">123 Main St.</option>
+      <option value="456 Oak Ave.">456 Oak Ave.</option>
+      <option value="789 Yal liv.">789 Yal liv.</option>
+      <option value="901 Ark gof.">901 Ark gof.</option>
+    </select>
     <br><br>
 	<label for="remark">Remark:</label>
     <textarea name="remark" id="remark"></textarea>
@@ -189,15 +293,44 @@
   trainingSelect.addEventListener("change", function() {
     var training = trainingSelect.value;
 
-    if (training == "Target market segmentation workshop") {
+    if (training == "Target Market Segmentation Workshop") {
+
       locationSelect.value = "123 Main St.";
-      locationSelect.disabled = true;
-    } else if (training == "Customer experience improvement seminar") {
+    } else if (training == "User Persona Segmentation Workshop") {
+
+      locationSelect.value = "123 Main St.";
+    } else if (training == "Product Positioning Segmentation Workshop") {
+
+      locationSelect.value = "123 Main St.";
+    } else if (training == "Product Innovation Co-Creation Workshop") {
+
       locationSelect.value = "456 Oak Ave.";
-      locationSelect.disabled = true;
+    } else if (training == "Service Experience Co-Creation Workshop") {
+      
+      locationSelect.value = "456 Oak Ave.";
+    } else if (training == "Brand Storytelling Co-Creation Workshop") {
+      
+      locationSelect.value = "456 Oak Ave.";
+    } else if (training == "Consumer Insight Brainstorm Workshop") {
+      
+      locationSelect.value = "789 Yal liv.";
+    } else if (training == "Product Demand Brainstorm Workshop") {
+      
+      locationSelect.value = "789 Yal liv.";
+    } else if (training == "Marketing Creative Brainstorm Workshop") {
+      
+      locationSelect.value = "789 Yal liv.";
+    } else if (training == "Team Collaboration Activation Workshop") {
+      
+      locationSelect.value = "901 Ark gof.";
+    } else if (training == "Team Culture Activation Workshop") {
+      
+      locationSelect.value = "901 Ark gof.";
+    } else if (training == "Team Decision-Making Activation Workshop") {
+      
+      locationSelect.value = "901 Ark gof.";
     } else {
       locationSelect.value = "";
-      locationSelect.disabled = false;
     }
   });
 </script>
