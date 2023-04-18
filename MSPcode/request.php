@@ -136,7 +136,6 @@
     <br>
     <span class="error"><?php if (isset($nameErr)) { echo $nameErr; } ?></span>
     <span class="error"><?php if (isset($trainingErr)) { echo $trainingErr; } ?></span>
-    <br><br>
     <label for="training">Training:</label>
     <select name="training" id="training">
       <option value="">-</option>
