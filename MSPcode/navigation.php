@@ -4,7 +4,7 @@ echo '<nav class="navbar">';
 echo '<ul>';
 echo '<li><a href="client.php">Home <i class="fas fa-home"></i></a></li>';
 echo '<li class="dropdown">';
-echo '<a href="training.php">Trainings <i class="fas fa-bars"></i></a>';
+echo '<a href="#">Trainings <i class="fas fa-bars"></i></a>';
 echo '<div class="dropdown-content">';
 echo '<a href="segmentation.php">Segmentation Workshop</a>';
 echo '<a href="cocreation.php">Co-Creation Workshop</a>';
