@@ -28,7 +28,7 @@
             echo "Sorry, training already exists.";
             $uploadOk = 0;
         }
-
+        
         if ((!isset($_POST["tName"]) && !isset($_POST["tCategory"]) && !isset($_POST["tLocation"]) && !isset($_POST["tDescription"]) && !isset($_POST["tPrice"]))){
             echo "Please fill in all fields";
             $uploadOk = 0;
@@ -46,15 +46,15 @@
 
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
               echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-              $sql = "INSERT INTO trainings (tName, tCategory, tLocation, tDescription, tPrice)
+              $sql = "INSERT INTO trainings (tName, tCategory, tLocation, tDescription, tPrice) 
                     SELECT * FROM (SELECT '$tName', '$tCategory', '$tLocation', '$tDescription', '$tPrice') AS tmp
-                    WHERE NOT EXISTS(
-              SELECT tname FROM trainings WHERE tName = '$tName') LIMIT 1";
-
-            mysqli_query($conn, $sql);
-            if ( mysqli_affected_rows($conn)>0)
+                    WHERE NOT EXISTS(  
+                    SELECT tName FROM trainings WHERE tName = '$tName') LIMIT 1";  
+ 
+            mysqli_query($conn, $sql);  
+            if ( mysqli_affected_rows($conn)>0){
                 echo "Records inserted successfully.";
-            else{
+            }else{
             echo "There is an existing training. Please use a different number";
             }
             } else {
@@ -65,21 +65,21 @@
             echo "Please fill in all fields.";
         }
 
-
+        
         }
 
+    
 
-
-
+    
     ?>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
-
+        
         <p><label for="fileToUpload">Image: </label>
         <input type="file" name="fileToUpload" id="fileToUpload"/></p>
-
+        
         <p><label for="tName">Training Name: </label>
         <input type="text" name="tName" id="tName"/></p>
-
+        
         <p><label for="tCategory">Training Category: </label>
         <select name="tCategory" id="tCategory">
             <option value="segmentation">Segmentation Workshop</option>
@@ -96,9 +96,9 @@
 
         <p><label for="tDescription">Training Description: </label>
         <input type="text" name="tDescription" id="tDescription"/></p>
-
+        
         <p><input type="submit" value="Add" name="submit"/></p>
     </form>
-
+    
 </body>
 </html>

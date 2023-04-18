@@ -16,13 +16,13 @@
   </div>
   </div>
   </div>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
 	<?php
 	require_once "includes/connect.php";
 
