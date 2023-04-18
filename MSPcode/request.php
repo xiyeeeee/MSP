@@ -63,7 +63,7 @@
         while ($row = $result->fetch_assoc()) {
         $trainings[] = array(
             "name" => $row["tname"],
-            "location" => $row["location"]
+            "location" => $row["tlocation"]
         );
         }
     }
