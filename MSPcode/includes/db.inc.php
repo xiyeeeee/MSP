@@ -17,6 +17,8 @@ function createTableUsers($conn){
         usersEmail VARCHAR(128) NOT NULL,
         usersUid VARCHAR(128) NOT NULL,
         usersPwd VARCHAR(128) NOT NULL,
+        usersTraining VARCHAR(128) NOT NULL,
+        usersStatus VARCHAR(128) NOT NULL,
         regDate TIMESTAMP
     )";
 

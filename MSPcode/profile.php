@@ -35,58 +35,28 @@
 <section class="my-section">
 <div class= "btn_outputs">
         <?php
-            require_once 'includes/db.inc.php';
-            $sql = "SELECT usersId, usersName, usersEmail, usersUid, regDate from users";
-            $result = $conn-> query($sql);
-            echo "<table class='user_table'>";
-            echo "<thead>";
-            echo "<tr>";
-            echo "<th>ID</th>";
-            echo "<th>Name</th>";
-            echo "<th>Email</th>";
-            echo "<th>Username</th>";
-            echo "<th>Registered Date</th>";
-            echo "</tr>";
-            echo "</thead>";
-            echo "<tbody>";
-            if ($result-> num_rows > 0){
-                while ($row = $result-> fetch_assoc()){
-                    echo "<tr>";
-                    echo "<td>" . $row["usersId"] . "</td>";
-                    echo "<td>" . $row["usersName"] . "</td>";
-                    echo "<td>" . $row["usersEmail"] . "</td>";
-                    echo "<td>" . $row["usersUid"] . "</td>";
-                    echo "<td>" . $row["regDate"] . "</td>";
-                    echo "<td>";
-                    echo '<input type="hidden" name="selected_user_id" value="' . $row["usersId"] . '"/>';
-                    echo '<input type="hidden" name="selected_user_name" value="' . $row["usersUid"] . '"/>';
-                    echo '</form>';
-                    echo "</td>";
-                    echo "</tr>";
-                }
+            // Check if the user is logged in
+            if (isset($_SESSION['usersuid'])) {
+
+              // Get the username of the logged-in user
+              $logged_in_user = $_SESSION['usersuid'];
+
+              // Display the details of the logged-in user
+              echo "<h1>User Details</h1>";
+              echo "<p>Name: " . $logged_in_user['usersUid'] . "</p>";
+              echo "<p>Email: " . $logged_in_user['email'] . "</p>";
+              echo "<p>Registered Date: " . $logged_in_user['regDate'] . "</p>";
+              echo "<p>Training Chosen: " . $logged_in_user['usersTraining'] . "</p>";
+              echo "<p>Training Status: " . $logged_in_user['usersStatus'] . "</p>";
+              // add more details as required
+            } else {
+              // If the user is not logged in, redirect to the login page
+              header("Location:");
+              exit();
             }
-            echo "</tbody>";
-            echo "</table>";
-
-            if (isset($_GET["error"])){
-                if ($_GET["error"] == "emptyfields"){
-                    echo "<script>alert('Some areas are blank. Deletion unsuccessful.')</script>";
-                }
-                else if ($_GET["error"] == "passworderror"){
-                    echo "<script>alert('Unrecognized password. Deletion unsuccessful.')</script>";
-                }
-                else if ($_GET["error"] == "passwordnotsame"){
-                    echo "<script>alert('Password and repeated password not match. Deletion unsuccessful.')</script>";
-                }
-                else if ($_GET["error"] == "none"){
-                    echo "<script>alert('User deleted successfully.')</script>";
-                }
-            }
-
-
             $conn-> close();
         ?>
-
+        
     </div>
     </section>
 <br>

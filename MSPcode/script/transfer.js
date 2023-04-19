@@ -1,7 +1,7 @@
 /* Transfer between */
 function autofill(product){
     var name = product.split(' ');
-    var locationString = 'enquiry.php?'
+    var locationString = 'request.php?'
     var i;
     for (i = 0; i < name.length; i++){
         locationString += name[i] + "%20";

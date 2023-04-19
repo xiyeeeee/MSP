@@ -27,7 +27,7 @@
 <br>
 <br>
         <div class="change-password-form">
-            <h2>Change Password</h2>
+            <?php echo "<h2>Change Password? " . $_SESSION['useruid']?>
             <form action="includes/change_pw.inc.php" method="post">
                 <input type="password" name="old_pass" placeholder="Old Password" />
                 <input type="password" name="new_pass" placeholder="New Password" />
@@ -58,8 +58,6 @@
             ?>
         </div>
     </article>
-    <script src="script/nav.js"></script>
-    <script src="script/manage.js"></script>
     <script src="https://kit.fontawesome.com/2076012a21.js" crossorigin="anonymous"></script>
 </body>
 </html>

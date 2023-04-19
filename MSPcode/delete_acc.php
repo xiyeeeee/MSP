@@ -27,7 +27,7 @@
 <br>
         <div class="delete-form">
             <?php
-            $username = $_POST["selected_user_name"];
+            $username = $_SESSION['useruid'];
 
             echo "<p class='confirm-user'>Confirm Delete Account " . $username . "?</p>";
             echo "<p class='warning-delete'>Warning: This action cannot be undone!</p>";
@@ -38,8 +38,8 @@
                 <input type="password" name="pass" placeholder="Password" />
                 <input type="password" name="pass_repeat" placeholder="Repeat Password" />
                 <?php
-                $userID = $_POST["selected_user_id"];
-                $username = $_POST["selected_user_name"];
+                $userID = $_SESSION['userid'];
+                $username = $_SESSION['useruid'];
                 echo '<input type="hidden" name="selected_user_id" value="' . $userID . '"/>';
                 echo '<input type="hidden" name="selected_user_name" value="' . $username . '"/>';
                 ?>
