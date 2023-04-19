@@ -331,51 +331,30 @@
   color: black;
 }
 /*Profile*/
-.user_table{
-    color: black;
-    border-collapse: collapse;
-    margin-top: 3%;
-    margin-left: 5%;
-    width: 90%;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+.profile-container {
+  color: black;
+  padding: 10px;
+  text-align: center;
+  background-color: #cfa4bb;
+  border: 8px solid #5D4954;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.user_table thead tr{
-    background-color: #5D4954;
-    color: #ffffff;
-    text-align: left;
-    font-weight: bold;
+.profile-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.user_table th, .user_table td{
-    padding: 10px 10px;
+.profile-container p {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.user_table tbody tr{
-    border-bottom: 1px solid #dddddd;
-}
-
-.user_table tbody tr:nth-of-type(even){
-    background-color: #f3f3f3;
-}
-
-.user_table tbody tr:last-of-type{
-    border-bottom: 3px solid #5D4954;
-}
-
-.user_table button{
-    padding: 2px;
-    border-radius: 5px;
-    outline: none;
-}
-
-@media screen and (max-width: 600px){
-    .user_table th, .user_table td{
-        padding: 7px;
-    }
-}
 /*Change Password*/
 .change-password-form{
     color: black;

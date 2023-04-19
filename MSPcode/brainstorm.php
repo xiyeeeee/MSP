@@ -31,7 +31,7 @@
     <p>A creative session that brings together businesses and stakeholders to generate new ideas and insights into their target customers. The workshop aims to help businesses understand their customers better and develop solutions that meet their needs and preferences.</p>
     <p>Location: Swinburne Sarawak</p>
     <p>Price: RM80.00</p>
-    <button onclick="autofill('The International 7')">Enquire Now</button>
+    <button onclick="autofill('Consumer Insight Brainstorm Workshop')">Enquire Now</button>
   </div>
   </div>
   <br>
@@ -43,7 +43,7 @@
     <p>A collaborative session that brings together businesses and stakeholders to generate new ideas and insights into product demand. The workshop aims to help businesses understand the market demand for their products and identify opportunities for growth.</p>
     <p>Location: BCCK</p>
     <p>Price: RM90.00</p>
-    <button onclick="autofill('The International 7')">Enquire Now</button>
+    <button onclick="autofill('Product Demand Brainstorm Workshop')">Enquire Now</button>
   </div>
   </div>
   <br>
@@ -55,7 +55,7 @@
     <p>A collaborative session that brings together businesses and stakeholders to generate new ideas and creative solutions for marketing campaigns. The workshop aims to help businesses create compelling and effective marketing strategies that resonate with their target audience and drive business growth.</p>
     <p>Location: MBKS</p>
     <p>Price: RM100.00</p>
-    <button onclick="autofill('The International 7')">Enquire Now</button>
+    <button onclick="autofill('Marketing Creative Brainstorm Workshop')">Enquire Now</button>
   </div>
   </div>
   <br>
@@ -63,5 +63,6 @@
 </section>
 <br>
 <br>
+<script src="script/transfer.js"></script>
 </body>
 </html>

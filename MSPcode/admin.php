@@ -80,7 +80,7 @@ $pageTitle = "Admin Dashboard";
 
       </div>-->
       <div class="dashboard">
-        <a href="manage_training.php">
+        <a href="add_training.php">
         <div class="category">
           <div class="slideshow">
             <img src="./img/volleyball.jpg">

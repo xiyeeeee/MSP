@@ -9,7 +9,7 @@
         <link rel="shortcut icon" href="img/fav-icon.jpg" type="image/jpg">
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
         <title>PROFILE: ETMP</title>
     </head>
 <body id="profilebg">
@@ -32,32 +32,37 @@
     <br>
     <br>
 </article>
-<section class="my-section">
-<div class= "btn_outputs">
+<section class="profile-container">
         <?php
             // Check if the user is logged in
-            if (isset($_SESSION['usersuid'])) {
+            if (isset($_SESSION['useruid'])) {
 
-              // Get the username of the logged-in user
-              $logged_in_user = $_SESSION['usersuid'];
+              require_once 'includes/db.inc.php';
+              require_once 'includes/functions.inc.php';
+
+              $uidExists = uidExists($conn, $_SESSION['useruid'], $_SESSION['useruid']);
 
               // Display the details of the logged-in user
               echo "<h1>User Details</h1>";
-              echo "<p>Name: " . $logged_in_user['usersUid'] . "</p>";
-              echo "<p>Email: " . $logged_in_user['email'] . "</p>";
-              echo "<p>Registered Date: " . $logged_in_user['regDate'] . "</p>";
-              echo "<p>Training Chosen: " . $logged_in_user['usersTraining'] . "</p>";
-              echo "<p>Training Status: " . $logged_in_user['usersStatus'] . "</p>";
+              echo "<p>Name: " . $uidExists['usersName'] . "</p>";
+              echo "<p>Email: " . $uidExists['usersEmail'] . "</p>";
+              echo "<p>Username: " . $uidExists['usersUid'] . "</p>";
+              echo "<p>Password: " . $uidExists['usersPwd'] . "</p>";
+              echo "<p>Registration Date: " . $uidExists['regDate'] . "</p>";
+
+              $sql = "SELECT usersId, usersName, usersEmail, usersUid from users";
+              $result = $conn-> query($sql);
+
+
+
+              $conn-> close();
               // add more details as required
             } else {
               // If the user is not logged in, redirect to the login page
-              header("Location:");
+              header("Location: login.php");
               exit();
             }
-            $conn-> close();
         ?>
-        
-    </div>
     </section>
 <br>
 <br>

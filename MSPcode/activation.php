@@ -31,7 +31,7 @@
     <p>A session designed to bring together team members and stakeholders to promote collaboration, communication, and teamwork within the organization. The workshop aims to help team members understand their roles, responsibilities, and objectives better, and develop stronger relationships with one another.</p>
     <p>Location: Swinburne Sarawak</p>
     <p>Price: RM80.00</p>
-    <button onclick="autofill('The International 7')">Enquire Now</button>
+    <button onclick="autofill('Team Collaboration Activation Workshop')">Enquire Now</button>
   </div>
   </div>
   <br>
@@ -43,7 +43,7 @@
     <p>A session designed to help teams and organizations develop a positive and productive work culture. The workshop aims to promote teamwork, communication, and a shared sense of purpose and values within the team.</p>
     <p>Location: BCCK</p>
     <p>Price: RM90.00</p>
-    <button onclick="autofill('The International 7')">Enquire Now</button>
+    <button onclick="autofill('Team Culture Activation Workshop')">Enquire Now</button>
   </div>
   </div>
   <br>
@@ -55,7 +55,7 @@
     <p>A session designed to help teams and organizations improve their decision-making processes. The workshop aims to promote collaboration, critical thinking, and effective problem-solving within the team.</p>
     <p>Location: MBKS</p>
     <p>Price: RM100.00</p>
-    <button onclick="autofill('The International 7')">Enquire Now</button>
+    <button onclick="autofill('Team Decision-Making Activation Workshop')">Enquire Now</button>
   </div>
   </div>
   <br>
@@ -63,5 +63,6 @@
 </section>
 <br>
 <br>
+<script src="script/transfer.js"></script>
 </body>
 </html>

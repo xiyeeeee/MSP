@@ -201,7 +201,7 @@ function deleteUser($conn, $userID, $currentID){
         session_start();
         session_unset();
         session_destroy();
-        header("location: ../index.php?error=none");
+        header("location: ../login.php?error=none");
         exit();
     }
     header("location: ../users.php?error=none");

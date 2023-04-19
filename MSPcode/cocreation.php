@@ -31,7 +31,7 @@
     <p>A collaborative session that brings together businesses, customers, and other stakeholders to generate new ideas and develop innovative products or services. The workshop aims to help businesses understand their customers better and create solutions that meet their needs and preferences.</p>
     <p>Location: Swinburne Sarawak</p>
     <p>Price: RM80.00</p>
-    <button onclick="autofill('The International 7')">Enquire Now</button>
+    <button onclick="autofill('Product Innovation Co-Creation Workshop')">Enquire Now</button>
   </div>
   </div>
   <br>
@@ -43,7 +43,7 @@
     <p>A collaborative session that brings together businesses, customers, and other stakeholders to design and develop innovative service experiences that meet the needs and preferences of customers. The workshop aims to help businesses understand their customers better and create solutions that provide exceptional customer experiences.</p>
     <p>Location: BCCK</p>
     <p>Price: RM90.00</p>
-    <button onclick="autofill('The International 7')">Enquire Now</button>
+    <button onclick="autofill('Service Experience Co-Creation Workshop')">Enquire Now</button>
   </div>
   </div>
   <br>
@@ -55,7 +55,7 @@
     <p>A collaborative session that brings together businesses, customers, and other stakeholders to create a compelling brand story that resonates with their target audience. The workshop aims to help businesses understand their customers better and develop a strong brand identity that connects with their values and aspirations.</p>
     <p>Location: MBKS</p>
     <p>Price: RM100.00</p>
-    <button onclick="autofill('The International 7')">Enquire Now</button>
+    <button onclick="autofill('Brand Storytelling Co-Creation Workshop')">Enquire Now</button>
   </div>
   </div>
   <br>
@@ -63,5 +63,6 @@
 </section>
 <br>
 <br>
+<script src="script/transfer.js"></script>
 </body>
 </html>

@@ -305,28 +305,28 @@
 
       locationSelect.value = "456 Oak Ave.";
     } else if (training == "Service Experience Co-Creation Workshop") {
-      
+
       locationSelect.value = "456 Oak Ave.";
     } else if (training == "Brand Storytelling Co-Creation Workshop") {
-      
+
       locationSelect.value = "456 Oak Ave.";
     } else if (training == "Consumer Insight Brainstorm Workshop") {
-      
+
       locationSelect.value = "789 Yal liv.";
     } else if (training == "Product Demand Brainstorm Workshop") {
-      
+
       locationSelect.value = "789 Yal liv.";
     } else if (training == "Marketing Creative Brainstorm Workshop") {
-      
+
       locationSelect.value = "789 Yal liv.";
     } else if (training == "Team Collaboration Activation Workshop") {
-      
+
       locationSelect.value = "901 Ark gof.";
     } else if (training == "Team Culture Activation Workshop") {
-      
+
       locationSelect.value = "901 Ark gof.";
     } else if (training == "Team Decision-Making Activation Workshop") {
-      
+
       locationSelect.value = "901 Ark gof.";
     } else {
       locationSelect.value = "";
@@ -336,5 +336,6 @@
 
 </form>
 <br><br>
+<script src="script/transfer.js"></script>
 </body>
 </html>
