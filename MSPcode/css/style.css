@@ -31,7 +31,7 @@
   background-blend-mode: darken;
 }
 #profilebg{
-  background: rgba(0, 0, 0, 0.5)url(../img/profile.jpg) no-repeat center center fixed;
+  background: rgba(0, 0, 0, 0.5)url(../img/pbg.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 #reqbg{
