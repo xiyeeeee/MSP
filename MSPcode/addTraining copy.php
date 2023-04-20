@@ -56,7 +56,6 @@
                 echo "Records inserted successfully.";
             }else{
             echo "There is an existing training. Please use a different number";
-            }
             } else {
               echo "Sorry, there was an error adding the training.";
             }
