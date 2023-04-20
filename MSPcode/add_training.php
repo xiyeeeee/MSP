@@ -1,29 +1,10 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="script.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	<title>TRAINING: ETMP</title>
 </head>
 <body>
-<div class= "dashboard-container">
-  <div class="header-container">
-  <div class="logo-container">
-    <div class="logo">
-      <h1 class="logo-text">Expert<span class="trademark">&reg;</span></h1>
-    </div>
-    <?php include 'adminNav.php';?>
-  </div>
-  </div>
-  </div>
-	<br></br>
-	<br></br>
-	<br></br>
-	<br></br>
-	<br></br>
-	<br></br>
-	<br></br>
-	<?php
+    <?php
     require_once "includes/connect.php";
 
     // Check if image file is a actual image or fake image
@@ -65,10 +46,8 @@
 
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
               echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-              $sql = "INSERT INTO trainings (tName, tCategory, tLocation, tDescription, tPrice) 
-                    SELECT * FROM (SELECT '$tName', '$tCategory', '$tLocation', '$tDescription', '$tPrice') AS tmp
-                    WHERE NOT EXISTS(  
-                    SELECT tName FROM trainings WHERE tName = '$tName') LIMIT 1";  
+              $sql = "INSERT IGNORE INTO trainings (tName, tCategory, tLocation, tDescription, tPrice) 
+                    VALUES ('$tName', '$tCategory', '$tLocation', '$tDescription', '$tPrice')"; 
  
             mysqli_query($conn, $sql);  
             if ( mysqli_affected_rows($conn)>0){
@@ -120,4 +99,4 @@
     </form>
     
 </body>
-</html>	
+</html>
