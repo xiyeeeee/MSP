@@ -285,6 +285,7 @@
     font-weight: 600;
     text-align: center;
 }
+
 /*Training*/
 .training {
   display: flex;
@@ -293,7 +294,7 @@
 }
 
 .training-item {
-  max-width: 800px;
+  width: 800px;
   margin: 20px;
   background-color: #f8f8f8;
   border-radius: 5px;
@@ -330,13 +331,14 @@
   font-size: 16px;
   color: black;
 }
+
 /*Profile*/
 .profile-container {
   color: black;
   padding: 10px;
   text-align: center;
-  background-color: #cfa4bb;
-  border: 8px solid #5D4954;
+  background-color: #add8e6;
+  border: 8px solid #000058;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -360,8 +362,8 @@
     color: black;
     padding: 10px;
     text-align: center;
-    background-color: #cfa4bb;
-    border: 8px solid #5D4954;
+    background-color: #add8e6;
+    border: 8px solid #000058;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -378,7 +380,7 @@
 .change-password-form input{
     display: block;
     margin: auto;
-    background: #cfa4bb;
+    background: #86c5da;
     border: none;
     margin-top: 25px;
     border-bottom: 3px solid #5D4954;
@@ -391,13 +393,13 @@
     background: #fff;
     border: 2px solid #5D4954;
     border-radius: 10px;
-    color: #5D4954;
+    color: #000058;
     font-weight: bold;
     outline: none;
 }
 
 .change-password-form button:hover{
-    background: #5D4954;
+    background: #000058;
     color: #fff;
 
 }
@@ -417,9 +419,9 @@
 .delete-form{
     text-align: center;
     color: black;
-    background-color: #cfa4bb;
     padding: 30px;
-    border: 5px solid black;
+    background-color: #add8e6;
+    border: 8px solid #000058;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -445,15 +447,27 @@
 .delete-form input{
     display: block;
     margin: auto;
-    margin-top: 8px;
-    padding: 2px;
+    background: #86c5da;
+    border: none;
+    margin-top: 25px;
+    border-bottom: 3px solid #5D4954;
+    font-size: 14px;
 }
 
 .delete-form button{
-    margin-top: 15px;
+    margin: 25px;
     padding: 10px;
+    background: #fff;
+    border: 2px solid red;
     border-radius: 10px;
+    color: red;
+    font-weight: bold;
     outline: none;
+}
+
+.delete-form button:hover{
+    background: red;
+    color: #fff;
 }
 
 @media screen and (max-width: 1000px){

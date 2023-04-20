@@ -23,44 +23,30 @@
   <br>
   <br>
   <br>
-  <section class="training">
-  <div class="training-item">
-    <img class="image" src="img/seg1.jpg" alt="Training 1">
-    <div class="training-info">
-    <h3>Target Market Segmentation Workshop</h3>
-    <p>A strategic planning session that helps businesses identify and divide their target market into distinct groups based on common characteristics such as demographics, psychographics, behavior, and other factors. The workshop aims to help businesses understand their customers better and create a more effective marketing strategy by tailoring their message and offerings to the specific needs and preferences of each segment.</p>
-    <p>Location: Swinburne Sarawak</p>
-    <p>Price: RM80.00</p>
-    <button onclick="autofill('Target Market Segmentation Workshop')">Enquire Now</button>
-  </div>
-  </div>
-  <br>
-  <br>
-  <div class="training-item">
-    <img class="image" src="img/seg2.jpg" alt="Training 2">
-    <div class="training-info">
-    <h3>User Persona Segmentation Workshop</h3>
-    <p>A strategic planning session that helps businesses create detailed profiles of their ideal customers based on their characteristics, behaviors, goals, and needs. The workshop aims to help businesses understand their customers better and create more personalized and effective user experiences for them.</p>
-    <p>Location: BCCK</p>
-    <p>Price: RM90.00</p>
-    <button onclick="autofill('User Persona Segmentation Workshop')">Enquire Now</button>
-  </div>
-  </div>
-  <br>
-  <br>
-  <div class="training-item">
-    <img class="image" src="img/seg3.webp" alt="Training 3">
-    <div class="training-info">
-    <h3>Product Positioning Segmentation Workshop</h3>
-    <p>A strategic planning session that helps businesses identify the unique selling points of their products and services and position them in the market to stand out from their competitors. The workshop aims to help businesses understand their customers better and create a more effective marketing strategy by differentiating their offerings from others in the market.</p>
-    <p>Location: MBKS</p>
-    <p>Price: RM100.00</p>
-    <button onclick="autofill('Product Positioning Segmentation Workshop')">Enquire Now</button>
-  </div>
-  </div>
-  <br>
-  <br>
-</section>
+	<?php
+		require_once "includes/connect.php";
+		$sql = "SELECT tName, tCategory, tLocation, tPrice, tDescription from trainings";
+		$result = $conn-> query($sql);
+		if ($result-> num_rows > 0){
+				while ($row = $result-> fetch_assoc()){
+						echo "<section class='training'>";
+						echo "<div class='training-item'>";
+						echo '<img class="image" src="img/seg1.jpg" alt="Training 1">';
+						/*echo "<img class='image' src = img/'$imgPath'/>" . $row.["tName"];*/
+						echo "<div class='training-info'>";
+						echo "<h3>" . $row["tName"] . "</h3>";
+						echo "<p>" . $row["tDescription"] . "</p>";
+						echo "<p>" . $row["tLocation"] . "</p>";
+						echo "<p>" . $row["tPrice"] . "</p>";
+
+						echo '</div>';
+						echo '</div>';
+						echo '<br>';
+						echo '<br>';
+						echo '</section>';
+				}
+		}
+?>
 <br>
 <br>
 <script src="script/transfer.js"></script>
