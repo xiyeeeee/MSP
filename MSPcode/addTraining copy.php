@@ -46,10 +46,9 @@
 
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
               echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-              $sql = "INSERT INTO trainings (tName, tCategory, tLocation, tDescription, tPrice) 
-                    SELECT * FROM (SELECT '$tName', '$tCategory', '$tLocation', '$tDescription', '$tPrice') AS tmp
-                    WHERE NOT EXISTS(  
-                    SELECT tName FROM trainings WHERE tName = '$tName') LIMIT 1";  
+              $sql = "INSERT IGNORE INTO trainings (tName, tCategory, tLocation, tDescription, tPrice) 
+                    VALUES (SELECT '$tName', '$tCategory', '$tLocation', '$tDescription', '$tPrice')
+                    "; 
  
             mysqli_query($conn, $sql);  
             if ( mysqli_affected_rows($conn)>0){
