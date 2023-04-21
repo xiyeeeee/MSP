@@ -25,9 +25,9 @@
   <br>
 	<?php
 	require_once "includes/connect.php";
-	$sql = "SELECT tName, tCategory, tLocation, tPrice, tDescription from trainings";
+	$sql = "SELECT tName, tCategory, tLocation, tPrice, tDescription from trainings WHERE tCategory = 'Co-creation'";
 	$result = $conn-> query($sql);
-
+	echo '<h1 class = "title">Co-creation</h1>';
 	// Group the trainings by category
 	$trainings_by_category = array();
 	while ($row = $result->fetch_assoc()) {
@@ -39,7 +39,6 @@
 	}
 
 	foreach ($trainings_by_category['Co-creation'] as $training){
-			echo '<h1 class = "title">' . $category . '</h1>';
 			echo "<section class='training'>";
 			echo "<div class='training-item'>";
 			echo '<img class="image" src="img/seg1.jpg" alt="Training 1">';
