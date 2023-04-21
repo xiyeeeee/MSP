@@ -23,44 +23,41 @@
   <br>
   <br>
   <br>
-  <section class="training">
-  <div class="training-item">
-    <img class="image" src="img/act1.webp" alt="Training 1">
-    <div class="training-info">
-    <h3>Team Collaboration Activation Workshop</h3>
-    <p>A session designed to bring together team members and stakeholders to promote collaboration, communication, and teamwork within the organization. The workshop aims to help team members understand their roles, responsibilities, and objectives better, and develop stronger relationships with one another.</p>
-    <p>Location: Swinburne Sarawak</p>
-    <p>Price: RM80.00</p>
-    <button onclick="autofill('Team Collaboration Activation Workshop')">Enquire Now</button>
-  </div>
-  </div>
-  <br>
-  <br>
-  <div class="training-item">
-    <img class="image" src="img/act2.jpg" alt="Training 2">
-    <div class="training-info">
-    <h3>Team Culture Activation Workshop</h3>
-    <p>A session designed to help teams and organizations develop a positive and productive work culture. The workshop aims to promote teamwork, communication, and a shared sense of purpose and values within the team.</p>
-    <p>Location: BCCK</p>
-    <p>Price: RM90.00</p>
-    <button onclick="autofill('Team Culture Activation Workshop')">Enquire Now</button>
-  </div>
-  </div>
-  <br>
-  <br>
-  <div class="training-item">
-    <img class="image" src="img/act3.jpg" alt="Training 3">
-    <div class="training-info">
-    <h3>Team Decision-Making Activation Workshop</h3>
-    <p>A session designed to help teams and organizations improve their decision-making processes. The workshop aims to promote collaboration, critical thinking, and effective problem-solving within the team.</p>
-    <p>Location: MBKS</p>
-    <p>Price: RM100.00</p>
-    <button onclick="autofill('Team Decision-Making Activation Workshop')">Enquire Now</button>
-  </div>
-  </div>
-  <br>
-  <br>
-</section>
+	<?php
+		require_once "includes/connect.php";
+		$sql = "SELECT tName, tCategory, tLocation, tPrice, tDescription from trainings";
+		$result = $conn-> query($sql);
+
+		// Group the trainings by category
+		$trainings_by_category = array();
+		while ($row = $result->fetch_assoc()) {
+		    $category = $row['tCategory'];
+		    if (!isset($trainings_by_category[$category])) {
+		        $trainings_by_category[$category] = array();
+		    }
+		    $trainings_by_category[$category][] = $row;
+		}
+
+		foreach ($trainings_by_category['Activation'] as $training){
+				echo '<h1 class = "title">' . $category . '</h1>';
+				echo "<section class='training'>";
+				echo "<div class='training-item'>";
+				echo '<img class="image" src="img/seg1.jpg" alt="Training 1">';
+				/*echo "<img class='image' src = img/'$imgPath'/>" . $row.["tName"];*/
+				echo "<div class='training-info'>";
+				echo "<h3>" . $training["tName"] . "</h3>";
+				echo "<p>" . $training["tDescription"] . "</p>";
+				echo "<p>Location: " . $training["tLocation"] . "</p>";
+				echo "<p>Price: " . $training["tPrice"] . "</p>";
+				/*enquire button*/
+				echo '</div>';
+				echo '</div>';
+				echo '<br>';
+				echo '<br>';
+				echo '</section>';
+
+		}
+?>
 <br>
 <br>
 <script src="script/transfer.js"></script>

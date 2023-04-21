@@ -27,24 +27,35 @@
 		require_once "includes/connect.php";
 		$sql = "SELECT tName, tCategory, tLocation, tPrice, tDescription from trainings";
 		$result = $conn-> query($sql);
-		if ($result-> num_rows > 0){
-				while ($row = $result-> fetch_assoc()){
-						echo "<section class='training'>";
-						echo "<div class='training-item'>";
-						echo '<img class="image" src="img/seg1.jpg" alt="Training 1">';
-						/*echo "<img class='image' src = img/'$imgPath'/>" . $row.["tName"];*/
-						echo "<div class='training-info'>";
-						echo "<h3>" . $row["tName"] . "</h3>";
-						echo "<p>" . $row["tDescription"] . "</p>";
-						echo "<p>" . $row["tLocation"] . "</p>";
-						echo "<p>" . $row["tPrice"] . "</p>";
 
-						echo '</div>';
-						echo '</div>';
-						echo '<br>';
-						echo '<br>';
-						echo '</section>';
-				}
+		// Group the trainings by category
+		$trainings_by_category = array();
+		while ($row = $result->fetch_assoc()) {
+		    $category = $row['tCategory'];
+		    if (!isset($trainings_by_category[$category])) {
+		        $trainings_by_category[$category] = array();
+		    }
+		    $trainings_by_category[$category][] = $row;
+		}
+
+		foreach ($trainings_by_category['Segmentation'] as $training){
+				echo '<h1 class = "title">' . $category . '</h1>';
+				echo "<section class='training'>";
+				echo "<div class='training-item'>";
+				echo '<img class="image" src="img/seg1.jpg" alt="Training 1">';
+				/*echo "<img class='image' src = img/'$imgPath'/>" . $row.["tName"];*/
+				echo "<div class='training-info'>";
+				echo "<h3>" . $training["tName"] . "</h3>";
+				echo "<p>" . $training["tDescription"] . "</p>";
+				echo "<p>Location: " . $training["tLocation"] . "</p>";
+				echo "<p>Price: " . $training["tPrice"] . "</p>";
+				/*enquire button*/
+				echo '</div>';
+				echo '</div>';
+				echo '<br>';
+				echo '<br>';
+				echo '</section>';
+
 		}
 ?>
 <br>

@@ -91,10 +91,10 @@
 
         <p><label for="tCategory">Training Category: </label>
         <select name="tCategory" id="tCategory">
-            <option value="segmentation">Segmentation Workshop</option>
-            <option value="co-creation">Co-creation Workshop</option>
-            <option value="brainstorm">Brainstorm Workshop</option>
-            <option value="teamActivation">Team Activation Workshop</option>
+            <option value="Segmentation">Segmentation Workshop</option>
+            <option value="Co-creation">Co-creation Workshop</option>
+            <option value="Brainstorm">Brainstorm Workshop</option>
+            <option value="Activation">Team Activation Workshop</option>
         </select></p>
 
         <p><label for="tLocation">Training Location: </label>

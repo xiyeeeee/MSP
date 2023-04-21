@@ -23,44 +23,40 @@
   <br>
   <br>
   <br>
-  <section class="training">
-  <div class="training-item">
-    <img class="image" src="img/co1.jpg" alt="Training 1">
-    <div class="training-info">
-    <h3>Product Innovation Co-Creation Workshop</h3>
-    <p>A collaborative session that brings together businesses, customers, and other stakeholders to generate new ideas and develop innovative products or services. The workshop aims to help businesses understand their customers better and create solutions that meet their needs and preferences.</p>
-    <p>Location: Swinburne Sarawak</p>
-    <p>Price: RM80.00</p>
-    <button onclick="autofill('Product Innovation Co-Creation Workshop')">Enquire Now</button>
-  </div>
-  </div>
-  <br>
-  <br>
-  <div class="training-item">
-    <img class="image" src="img/co2.png" alt="Training 2">
-    <div class="training-info">
-    <h3>Service Experience Co-Creation Workshop</h3>
-    <p>A collaborative session that brings together businesses, customers, and other stakeholders to design and develop innovative service experiences that meet the needs and preferences of customers. The workshop aims to help businesses understand their customers better and create solutions that provide exceptional customer experiences.</p>
-    <p>Location: BCCK</p>
-    <p>Price: RM90.00</p>
-    <button onclick="autofill('Service Experience Co-Creation Workshop')">Enquire Now</button>
-  </div>
-  </div>
-  <br>
-  <br>
-  <div class="training-item">
-    <img class="image" src="img/co3.jpg" alt="Training 3">
-    <div class="training-info">
-    <h3>Brand Storytelling Co-Creation Workshop</h3>
-    <p>A collaborative session that brings together businesses, customers, and other stakeholders to create a compelling brand story that resonates with their target audience. The workshop aims to help businesses understand their customers better and develop a strong brand identity that connects with their values and aspirations.</p>
-    <p>Location: MBKS</p>
-    <p>Price: RM100.00</p>
-    <button onclick="autofill('Brand Storytelling Co-Creation Workshop')">Enquire Now</button>
-  </div>
-  </div>
-  <br>
-  <br>
-</section>
+	<?php
+	require_once "includes/connect.php";
+	$sql = "SELECT tName, tCategory, tLocation, tPrice, tDescription from trainings";
+	$result = $conn-> query($sql);
+
+	// Group the trainings by category
+	$trainings_by_category = array();
+	while ($row = $result->fetch_assoc()) {
+			$category = $row['tCategory'];
+			if (!isset($trainings_by_category[$category])) {
+					$trainings_by_category[$category] = array();
+			}
+			$trainings_by_category[$category][] = $row;
+	}
+
+	foreach ($trainings_by_category['Co-creation'] as $training){
+			echo '<h1 class = "title">' . $category . '</h1>';
+			echo "<section class='training'>";
+			echo "<div class='training-item'>";
+			echo '<img class="image" src="img/seg1.jpg" alt="Training 1">';
+			/*echo "<img class='image' src = img/'$imgPath'/>" . $row.["tName"];*/
+			echo "<div class='training-info'>";
+			echo "<h3>" . $training["tName"] . "</h3>";
+			echo "<p>" . $training["tDescription"] . "</p>";
+			echo "<p>Location: " . $training["tLocation"] . "</p>";
+			echo "<p>Price: " . $training["tPrice"] . "</p>";
+			/*enquire button*/
+			echo '</div>';
+			echo '</div>';
+			echo '<br>';
+			echo '<br>';
+			echo '</section>';
+	}
+?>
 <br>
 <br>
 <script src="script/transfer.js"></script>

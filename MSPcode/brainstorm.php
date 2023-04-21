@@ -23,44 +23,41 @@
   <br>
   <br>
   <br>
-  <section class="training">
-  <div class="training-item">
-    <img class="image" src="img/brain1.jpg" alt="Training 1">
-    <div class="training-info">
-    <h3>Consumer Insight Brainstorm Workshop</h3>
-    <p>A creative session that brings together businesses and stakeholders to generate new ideas and insights into their target customers. The workshop aims to help businesses understand their customers better and develop solutions that meet their needs and preferences.</p>
-    <p>Location: Swinburne Sarawak</p>
-    <p>Price: RM80.00</p>
-    <button onclick="autofill('Consumer Insight Brainstorm Workshop')">Enquire Now</button>
-  </div>
-  </div>
-  <br>
-  <br>
-  <div class="training-item">
-    <img class="image" src="img/brain2.webp" alt="Training 2">
-    <div class="training-info">
-    <h3>Product Demand Brainstorm Workshop</h3>
-    <p>A collaborative session that brings together businesses and stakeholders to generate new ideas and insights into product demand. The workshop aims to help businesses understand the market demand for their products and identify opportunities for growth.</p>
-    <p>Location: BCCK</p>
-    <p>Price: RM90.00</p>
-    <button onclick="autofill('Product Demand Brainstorm Workshop')">Enquire Now</button>
-  </div>
-  </div>
-  <br>
-  <br>
-  <div class="training-item">
-    <img class="image" src="img/brain3.png" alt="Training 3">
-    <div class="training-info">
-    <h3>Marketing Creative Brainstorm Workshop</h3>
-    <p>A collaborative session that brings together businesses and stakeholders to generate new ideas and creative solutions for marketing campaigns. The workshop aims to help businesses create compelling and effective marketing strategies that resonate with their target audience and drive business growth.</p>
-    <p>Location: MBKS</p>
-    <p>Price: RM100.00</p>
-    <button onclick="autofill('Marketing Creative Brainstorm Workshop')">Enquire Now</button>
-  </div>
-  </div>
-  <br>
-  <br>
-</section>
+	<?php
+		require_once "includes/connect.php";
+		$sql = "SELECT tName, tCategory, tLocation, tPrice, tDescription from trainings";
+		$result = $conn-> query($sql);
+
+		// Group the trainings by category
+		$trainings_by_category = array();
+		while ($row = $result->fetch_assoc()) {
+				$category = $row['tCategory'];
+				if (!isset($trainings_by_category[$category])) {
+						$trainings_by_category[$category] = array();
+				}
+				$trainings_by_category[$category][] = $row;
+		}
+
+		foreach ($trainings_by_category['Brainstorm'] as $training){
+				echo '<h1 class = "title">' . $category . '</h1>';
+				echo "<section class='training'>";
+				echo "<div class='training-item'>";
+				echo '<img class="image" src="img/seg1.jpg" alt="Training 1">';
+				/*echo "<img class='image' src = img/'$imgPath'/>" . $row.["tName"];*/
+				echo "<div class='training-info'>";
+				echo "<h3>" . $training["tName"] . "</h3>";
+				echo "<p>" . $training["tDescription"] . "</p>";
+				echo "<p>Location: " . $training["tLocation"] . "</p>";
+				echo "<p>Price: " . $training["tPrice"] . "</p>";
+				/*enquire button*/
+				echo '</div>';
+				echo '</div>';
+				echo '<br>';
+				echo '<br>';
+				echo '</section>';
+
+		}
+?>
 <br>
 <br>
 <script src="script/transfer.js"></script>

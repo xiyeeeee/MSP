@@ -287,6 +287,11 @@
 }
 
 /*Training*/
+.title{
+  text-align: center;
+  color: white;
+  font-style: italic;
+}
 .training {
   display: flex;
   flex-wrap: wrap;
