@@ -6,6 +6,7 @@
 	<title>TRAINING: ETMP</title>
 </head>
 <body id="actbg">
+	<button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
 <div class= "dashboard-container">
   <div class="header-container">
   <div class="logo-container">
@@ -31,34 +32,38 @@
 		// Group the trainings by category
 		$trainings_by_category = array();
 		while ($row = $result->fetch_assoc()) {
-		    $category = $row['tCategory'];
-		    if (!isset($trainings_by_category[$category])) {
-		        $trainings_by_category[$category] = array();
-		    }
-		    $trainings_by_category[$category][] = $row;
+				$category = $row['tCategory'];
+				if (!isset($trainings_by_category[$category])) {
+						$trainings_by_category[$category] = array();
+				}
+				$trainings_by_category[$category][] = $row;
 		}
 
-		foreach ($trainings_by_category['Activation'] as $training){
-				echo "<section class='training'>";
-				echo "<div class='training-item'>";
-				echo '<img class="image" src="img/seg1.jpg" alt="Training 1">';
-				/*echo "<img class='image' src = img/'$imgPath'/>" . $row.["tName"];*/
-				echo "<div class='training-info'>";
-				echo "<h3>" . $training["tName"] . "</h3>";
-				echo "<p>" . $training["tDescription"] . "</p>";
-				echo "<p>Location: " . $training["tLocation"] . "</p>";
-				echo "<p>Price: " . $training["tPrice"] . "</p>";
-				/*enquire button*/
-				echo '</div>';
-				echo '</div>';
-				echo '<br>';
-				echo '<br>';
-				echo '</section>';
-
+		if (sizeof($trainings_by_category) != 0) {
+			foreach ($trainings_by_category['Activation'] as $training){
+					echo "<section class='training'>";
+					echo "<div class='training-item'>";
+					$result = glob ('img/' . $training["tName"] . '.*');
+					echo '<img class="image" src="'. $result[0] .'" alt="' . $training["tName"] . '">';
+					echo "<div class='training-info'>";
+					echo "<h3>" . $training["tName"] . "</h3>";
+					echo "<p>" . $training["tDescription"] . "</p>";
+					echo "<p>Location: " . $training["tLocation"] . "</p>";
+					echo "<p>Price: " . $training["tPrice"] . "</p>";
+					/*enquire button*/
+					echo '</div>';
+					echo '</div>';
+					echo '<br>';
+					echo '<br>';
+					echo '</section>';
+			}
+		} else {
+			echo '<h2 class = "title">Sorry, No Trainings Available Under This Category Currently</h2>';
 		}
 ?>
 <br>
 <br>
 <script src="script/transfer.js"></script>
+<script src="script/buttontop.js"></script>
 </body>
 </html>
