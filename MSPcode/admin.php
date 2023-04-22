@@ -84,9 +84,9 @@ $pageTitle = "Admin Dashboard";
         <a href="add_training.php">
         <div class="category">
           <div class="slideshow">
-            <img src="./img/volleyball.jpg">
+            <img src="./img/TrainingManagement.png">
 
-            <img src="./img/swimming.jpg">
+            <img src="./img/FileManagement2.png">
           </div>
           <h2 class= my-heading>Training</h2>
         </div>
@@ -96,9 +96,9 @@ $pageTitle = "Admin Dashboard";
     <a href="manage_request.php">
         <div class="category">
           <div class="slideshow">
-            <img src="./img/paymenthd.jpg">
+            <img src="./img/RequestManagement2.png">
 
-            <img src="./img/paymenthd2.png">
+            <img src="./img/RequestManagement3.png">
           </div>
           <h2 class= my-heading >Request</h2>
         </div>
@@ -120,9 +120,9 @@ $pageTitle = "Admin Dashboard";
         <a href="#">
         <div class="category">
           <div class="slideshow">
-            <img src="./img/itinerary.png">
+            <img src="./img/FileManagement.png">
 
-            <img src="./img/itinerary2.png">
+            <img src="./img/FileManagement3.png">
           </div>
           <h2 class= my-heading>Booking</h2>
         </div>
