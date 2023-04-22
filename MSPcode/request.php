@@ -43,78 +43,44 @@
 
     mysqli_close($conn);
     ?>
-    <?php
+<?php
+
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "expert_db";
+    $dbName = "expert_db";
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $username, $password, $dbName);
 
     if ($conn->connect_error) {
         die("Fail conection: " . $conn->connect_error);
     }
 
-    $trainings = array();
-    $sql = "SELECT tname, tlocation FROM trainings";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-        $trainings[] = array(
-            "name" => $row["tname"],
-            "location" => $row["tlocation"]
-        );
-        }
-    }
-
-    $defaultLocation = "";
-    $training = "";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $_POST["name"];
         $training = $_POST["training"];
         $location = $_POST["location"];
         $remark = $_POST["remark"];
 
-        $nameErr = $trainingErr = $locationErr = "";
-        $isValid = true;
-
-        if (empty($name)) {
-        $nameErr = "Name is required";
-        $isValid = false;
-        }
-
-        if ($training == "-") {
-        $trainingErr = "Please choose Training";
-        $isValid = false;
-        } else {
-            foreach ($trainings as $t) {
-                if ($t["name"] == $training) {
-                    $defaultLocation = $t["location"];
-                    break;
-                }
-            }
-        }
-
-        if ($location == "-") {
-          $locationErr = "Please choose Location";
-          $isValid = false;
-        }
-
-        if ($isValid) {
+        $trainingErr = "";
+      if ($training == '') {
+        $trainingErr = "Please choose your training！";
+      }
+      
+      if ($trainingErr == ''){
         $status = "pending";
         $sql = "INSERT INTO requests (name, training, tlocation, remark, status) VALUES ('$name', '$training', '$location', '$remark', '$status')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "Your request is waiting to approve";
+            echo "Your request is waiting for approve";
         } else {
             echo "Something is wrong, please try later" . $conn->error;
         }
-        }
+      }
     }
 
     $conn->close();
-	?>
+?>
 <div class="header-container">
 <div class="logo-container">
   <div class="logo">
@@ -132,10 +98,30 @@
   <form class="container" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <h2 class="center">Client Request Form</h2>
     <label for="name">Name:</label>
+    <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "expert_db";
+
+            if (isset($_SESSION['useruid'])) {
+
+              require_once 'includes/db.inc.php';
+              require_once 'includes/functions.inc.php';
+
+              $uidExists = uidExists($conn, $_SESSION['useruid'], $_SESSION['useruid']);
+
+              // Display the details of the logged-in user
+              echo '<input type="text" id="name" name="name" value="' . $uidExists['usersUid'] . '" readonly>';
+
+              $sql = "SELECT usersName, usersUid from users";
+              $result = $conn-> query($sql);
+
+              $conn-> close();
+            }
+    ?>
     <br>
     <br>
-    <span class="error"><?php if (isset($nameErr)) { echo $nameErr; } ?></span>
-    <span class="error"><?php if (isset($trainingErr)) { echo $trainingErr; } ?></span>
     <label for="training">Training:</label>
     <select name="training" id="training">
       <option value="">-</option>
@@ -273,15 +259,13 @@
     <label for="location">Location:</label>
     <select name="location" id="location">
       <option value="">Select</option>
-      <option value="123 Main St.">123 Main St.</option>
-      <option value="456 Oak Ave.">456 Oak Ave.</option>
-      <option value="789 Yal liv.">789 Yal liv.</option>
-      <option value="901 Ark gof.">901 Ark gof.</option>
+      <option value="Swinburne Sarawak">Swinburne Sarawak</option>
+      <option value="BCCK">BCCK</option>
+      <option value="MBKS">MBKS</option>
     </select>
     <br><br>
 	<label for="remark">Remark:</label>
     <textarea name="remark" id="remark"></textarea>
-
 
 <input type="Submit" value="Submit">
 
@@ -294,40 +278,40 @@
 
     if (training == "Target Market Segmentation Workshop") {
 
-      locationSelect.value = "123 Main St.";
+      locationSelect.value = "Swinburne Sarawak";
     } else if (training == "User Persona Segmentation Workshop") {
 
-      locationSelect.value = "123 Main St.";
+      locationSelect.value = "BCCK";
     } else if (training == "Product Positioning Segmentation Workshop") {
 
-      locationSelect.value = "123 Main St.";
+      locationSelect.value = "MBKS";
     } else if (training == "Product Innovation Co-Creation Workshop") {
 
-      locationSelect.value = "456 Oak Ave.";
+      locationSelect.value = "Swinburne Sarawak";
     } else if (training == "Service Experience Co-Creation Workshop") {
 
-      locationSelect.value = "456 Oak Ave.";
+      locationSelect.value = "BCCK";
     } else if (training == "Brand Storytelling Co-Creation Workshop") {
 
-      locationSelect.value = "456 Oak Ave.";
+      locationSelect.value = "MBKS";
     } else if (training == "Consumer Insight Brainstorm Workshop") {
 
-      locationSelect.value = "789 Yal liv.";
+      locationSelect.value = "Swinburne Sarawak";
     } else if (training == "Product Demand Brainstorm Workshop") {
 
-      locationSelect.value = "789 Yal liv.";
+      locationSelect.value = "BCCK";
     } else if (training == "Marketing Creative Brainstorm Workshop") {
 
-      locationSelect.value = "789 Yal liv.";
+      locationSelect.value = "MBKS";
     } else if (training == "Team Collaboration Activation Workshop") {
 
-      locationSelect.value = "901 Ark gof.";
+      locationSelect.value = "Swinburne Sarawak";
     } else if (training == "Team Culture Activation Workshop") {
 
-      locationSelect.value = "901 Ark gof.";
+      locationSelect.value = "BCCK";
     } else if (training == "Team Decision-Making Activation Workshop") {
 
-      locationSelect.value = "901 Ark gof.";
+      locationSelect.value = "MBKS";
     } else {
       locationSelect.value = "";
     }
