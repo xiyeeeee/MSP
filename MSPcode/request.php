@@ -52,6 +52,9 @@
 
     $conn = new mysqli($servername, $username, $password, $dbName);
 
+    $tName = isset($_GET['tName']) ? $_GET['tName'] : '';
+    $tLocation = isset($_GET['tLocation']) ? $_GET['tLocation'] : '';
+
     if ($conn->connect_error) {
         die("Fail conection: " . $conn->connect_error);
     }
@@ -66,7 +69,7 @@
       if ($training == '') {
         $trainingErr = "Please choose your training！";
       }
-      
+
       if ($trainingErr == ''){
         $status = "pending";
         $sql = "INSERT INTO requests (name, training, tlocation, remark, status) VALUES ('$name', '$training', '$location', '$remark', '$status')";
@@ -123,7 +126,7 @@
     <br>
     <br>
     <label for="training">Training:</label>
-    <select name="training" id="training">
+    <select name="training" id="tName" value="tName">
       <option value="">-</option>
       <optgroup label="Segmentation Workshop">
       <?php
@@ -141,7 +144,7 @@
             }
 
             // Get trainings with the desired tCategory values
-            $sql = "SELECT tName FROM trainings WHERE tCategory IN ('Segmentation Workshop')";
+            $sql = "SELECT tName FROM trainings WHERE tCategory IN ('Segmentation')";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -173,7 +176,7 @@
             }
 
             // Get trainings with the desired tCategory values
-            $sql = "SELECT tName FROM trainings WHERE tCategory IN ('Co-Creation Workshop')";
+            $sql = "SELECT tName FROM trainings WHERE tCategory IN ('Co-Creation')";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -205,7 +208,7 @@
             }
 
             // Get trainings with the desired tCategory values
-            $sql = "SELECT tName FROM trainings WHERE tCategory IN ('Consumer Brainstorm Workshop')";
+            $sql = "SELECT tName FROM trainings WHERE tCategory IN ('Brainstorm')";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -237,7 +240,7 @@
             }
 
             // Get trainings with the desired tCategory values
-            $sql = "SELECT tName FROM trainings WHERE tCategory IN ('Team Activation Workshop')";
+            $sql = "SELECT tName FROM trainings WHERE tCategory IN ('Activation')";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -256,21 +259,18 @@
     </select>
     <span class="error"><?php if (isset($trainingErr)) { echo $trainingErr; } ?></span>
     <br><br>
+
     <label for="location">Location:</label>
-    <select name="location" id="location">
-      <option value="">Select</option>
-      <option value="Swinburne Sarawak">Swinburne Sarawak</option>
-      <option value="BCCK">BCCK</option>
-      <option value="MBKS">MBKS</option>
-    </select>
+      <input type="text" id="tLocation" name="tLocation" value="tLocation" readonly>
     <br><br>
+
 	<label for="remark">Remark:</label>
     <textarea name="remark" id="remark"></textarea>
 
 <input type="Submit" value="Submit">
 
 <script>
-  var trainingSelect = document.getElementById("training");
+  /*var trainingSelect = document.getElementById("training");
   var locationSelect = document.getElementById("location");
 
   trainingSelect.addEventListener("change", function() {
@@ -315,7 +315,8 @@
     } else {
       locationSelect.value = "";
     }
-  });
+  });*/
+
 </script>
 
 </form>

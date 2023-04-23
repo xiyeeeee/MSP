@@ -48,7 +48,7 @@
               echo "<p>Email: " . $uidExists['usersEmail'] . "</p>";
               echo "<p>Username: " . $uidExists['usersUid'] . "</p>";
               echo "<p>Password: " . $uidExists['usersPwd'] . "</p>";
-              echo "<p>Registration Date: " . $uidExists['regDate'] . "</p>";
+              echo "<p>Registration Date & Time: " . $uidExists['regDate'] . "</p>";
 
               $sql = "SELECT usersId, usersName, usersEmail, usersUid from users";
               $result = $conn-> query($sql);

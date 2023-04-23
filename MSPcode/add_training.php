@@ -21,10 +21,10 @@
     <br></br>
     <br></br>
 
-    
-	
+
+
 	<?php
-    
+
     require_once "includes/connect.php";
 
     // Check if image file is a actual image or fake image
@@ -46,7 +46,7 @@
             echo "Sorry, training already exists.";
             $uploadOk = 0;
         }
-        
+
         if ((!isset($_POST["tName"]) && !isset($_POST["tCategory"]) && !isset($_POST["tLocation"]) && !isset($_POST["tDescription"]) && !isset($_POST["tPrice"]))){
             echo "Please fill in all fields";
             $uploadOk = 0;
@@ -63,14 +63,10 @@
 
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
               echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-              $sql = "INSERT INTO trainings (tName, tCategory, tLocation, tDescription, tPrice) 
-                    SELECT * FROM (SELECT '$tName', '$tCategory', '$tLocation', '$tDescription', '$tPrice') AS tmp
-                    WHERE NOT EXISTS(  
-                    SELECT tName FROM trainings WHERE tName = '$tName') LIMIT 1";  
-              $sql = "INSERT IGNORE INTO trainings (tName, tCategory, tLocation, tDescription, tPrice) 
-                    VALUES ('$tName', '$tCategory', '$tLocation', '$tDescription', '$tPrice')"; 
+              $sql = "INSERT IGNORE INTO trainings (tName, tCategory, tLocation, tDescription, tPrice)
+                    VALUES ('$tName', '$tCategory', '$tLocation', '$tDescription', '$tPrice')";
 
-            mysqli_query($conn, $sql);  
+            mysqli_query($conn, $sql);
             if ( mysqli_affected_rows($conn)>0){
                 echo "Records inserted successfully.";
             }else{
@@ -83,25 +79,25 @@
         }else{
             echo "Please fill in all fields.";
         }
-        
+
         }
-    
+
     ?>
     <div class= "training-form">
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
-        
-        
+
+
     <p class="file-container"><label for="fileToUpload">Image:</label>
         <input type="file" name="fileToUpload" id="fileToUpload"/></p>
         <p><label for="tName">Training Name: </label>
         <input type="text" name="tName" id="tName"/></p>
-        
+
         <p><label for="tCategory">Training Category: </label>
         <select name="tCategory" id="tCategory">
-            <option value="segmentation">Segmentation Workshop</option>
-            <option value="co-creation">Co-creation Workshop</option>
-            <option value="brainstorm">Brainstorm Workshop</option>
-            <option value="teamActivation">Team Activation Workshop</option>
+            <option value="Segmentation">Segmentation Workshop</option>
+            <option value="Co-creation">Co-creation Workshop</option>
+            <option value="Brainstorm">Brainstorm Workshop</option>
+            <option value="Activation">Team Activation Workshop</option>
         </select></p>
         <p><label for="tLocation">Training Location: </label>
         <input type="text" name="tLocation" id="tLocation"/></p>
@@ -109,8 +105,8 @@
         <input type="text" name="tPrice" id="tPrice"/></p>
         <p><label for="tDescription">Training Description: </label>
         <input type="text" name="tDescription" id="tDescription"/></p>
-        
-        
+
+
         <p><input type="submit" value="Add" name="submit"/></p>
     </form>
     </div>
@@ -140,8 +136,8 @@
       </div>
     </div>
   </footer>
-    
+
       <script src="script/buttontop.js"></script>
 </body>
-</html>	
+</html>
 </html>

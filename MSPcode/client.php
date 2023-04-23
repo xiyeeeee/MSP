@@ -28,12 +28,12 @@ $pageTitle = "Dashboard";
   </div>
   </div>
     <div class="dashboard">
-        <a href="training.php">
+        <a href="segmentation.php">
         <div class="category">
           <div class="slideshow">
-            <img src="./img/volleyball.jpg">
+            <img src="./img/segbg.jpg">
 
-            <img src="./img/swimming.jpg">
+            <img src="./img/actbg.jpg">
           </div>
           <h2 class= my-heading>Training</h2>
         </div>

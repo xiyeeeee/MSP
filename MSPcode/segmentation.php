@@ -49,8 +49,8 @@
 					echo "<h3>" . $training["tName"] . "</h3>";
 					echo "<p>" . $training["tDescription"] . "</p>";
 					echo "<p>Location: " . $training["tLocation"] . "</p>";
-					echo "<p>Price: " . $training["tPrice"] . "</p>";
-					/*enquire button*/
+					echo "<p>Price: RM" . $training["tPrice"] . "</p>";
+					echo '<button id="enquiry-btn" type="button" data-tname="' . $training["tName"] . '" data-tlocation="' . $training["tLocation"] . '">Enquire Now</button>';
 					echo '</div>';
 					echo '</div>';
 					echo '<br>';
@@ -65,5 +65,6 @@
 <br>
 <script src="script/transfer.js"></script>
 <script src="script/buttontop.js"></script>
+<script src="script/transfer.js"></script>
 </body>
 </html>
