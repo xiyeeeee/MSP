@@ -7,7 +7,7 @@ echo '<li class="dropdown">';
 echo '<a href="#">Training Management<i class="fas fa-bars"></i></a>';
 echo '<div class="dropdown-content">';
 echo '<a href="add_training.php">Add Training</a>';
-echo '<a href="edit_training.php">Edit Training</a>';
+echo '<a href="searchTraining.php">Edit Training</a>';
 echo '</div>';
 echo '</li>';
 echo '<li><a href="manage_request.php">Request Management<i class="fas fa-bell"></i></a></li>';

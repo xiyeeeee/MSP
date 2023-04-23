@@ -112,7 +112,7 @@
         <p><label for="tDescription">Training Description: </label>
         <input type="text" name="tDescription" id="tDescription"/></p>
         
-        <p><input type="submit" value="Add" name="submit"/></p>
+        <p><input type="submit" value="Edit" name="submit"/></p>
 		<p><input type="hidden" value=<?php echo "$oldtName"?> name="otName"/></p>
     </form>
 </body>
