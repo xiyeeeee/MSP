@@ -8,7 +8,7 @@ $pageTitle = "Admin Dashboard";
 <html lang="en">
 <head>
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
     <script src="script.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>

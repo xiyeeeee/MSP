@@ -651,7 +651,6 @@
       top: 0;
       left: 0;
       z-index: 100;
-      margin-top: 0;
     }
   
     .logo-container {
@@ -767,9 +766,6 @@
     .dashboard-container
     {
       background-color: #11204a;
-      /*display: flex;
-      justify-content: center;*/
-      
     }
     .dashboard {
       display: grid;
@@ -907,8 +903,6 @@
     padding: 30px;
   
     color: #fff;
-
-    
     }
   
     .footer-column {
@@ -1167,73 +1161,3 @@
       color: #7f0909;
       border: 2px solid #7f0909;
     }
-
-  /*Add Training*/
-  .training-form {
-    margin-left: 450px;
-    margin-bottom: 150px;
-    border: 12px solid rgb(15, 15, 113);
-    padding: 20px;
-    padding-top: 30px;
-    background-color: rgb(219, 236, 205);
-    color: rgb(15, 15, 113);
-    text-align: center;
-    width: 50%;
-}
-
-.training-form label {
-    display: inline-block;
-    width: 150px;
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.training-form input[type="text"], 
-.training-form select {
-    width: 60%;
-    padding: 10px;
-    border: 2px solid darkblue;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-input[type="text"], select, textarea {
-  width: 300px;
-  display: inline-block;
-}
-
-.training-form input[type="submit"] {
-    background-color: rgb(15, 15, 113);;
-    color: white;
-    border: none;
-    padding: 20px 40px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 450px;
-    font-size: 20px;
-}
-
-.training-form input[type="submit"]:hover {
-    background-color: white;
-    color: rgb(15, 15, 113);
-    transition: all 0.3s ease-in-out;
-    
-}
-
-
-#add_trainingbg{
-  background: rgba(0, 0, 0, 0.5)url(../img/add_training.jpg) no-repeat center center fixed;
-  background-size: cover;
-}
-
-#fileToUpload
-{
-  margin-left: 10px;
- 
-}
-
-.file-container
-{
-  margin-right: 225px;
-}
-
