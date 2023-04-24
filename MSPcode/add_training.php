@@ -39,7 +39,7 @@
             echo "File is an image - " . $check["mime"] . ".";
             $uploadOk = 1;
         } else {
-            echo "File is not an image.";
+          echo "File is not an image.";
             $uploadOk = 0;
         }
         if (file_exists($target_file)) {
@@ -107,7 +107,7 @@
         <input type="text" name="tDescription" id="tDescription"/></p>
 
 
-        <p><input type="submit" value="Add" name="submit"/></p>
+        <p class="addtrainingtxt"><input type="submit" value="Add" name="submit"/></p>
     </form>
     </div>
 
