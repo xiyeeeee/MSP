@@ -40,7 +40,7 @@
 		}
 
 		if (sizeof($trainings_by_category) != 0) {
-			foreach ($trainings_by_category['Segmentation'] as $training){
+			foreach ($trainings_by_category['Activation'] as $training){
 					echo "<section class='training'>";
 					echo "<div class='training-item'>";
 					$result = glob ('img/' . $training["tName"] . '.*');

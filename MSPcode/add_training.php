@@ -27,32 +27,34 @@
 
     require_once "includes/connect.php";
 
+    $output = "";
     // Check if image file is a actual image or fake image
     if(isset($_POST["submit"])) {
         $target_dir = "img/";
         $target_file = $target_dir . $_POST["tName"] . ".png";
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-        if(isset($_FILES["fileToUpload"]["tmp_name"])){
+        
+        if($_FILES["fileToUpload"]["error"] != '4' || $_FILES["fileToUpload"]["error"] != '0' && $_FILES["fileToUpload"]["size"] != '0'  ){
         $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
         if($check !== false) {
-            echo "File is an image - " . $check["mime"] . ".";
+            $output = $output .  "File is an image - " . $check["mime"] . ".";
             $uploadOk = 1;
         } else {
-            echo "File is not an image.";
+            $output = $output .  "File is not an image.";
             $uploadOk = 0;
         }
         if (file_exists($target_file)) {
-            echo "Sorry, training already exists.";
+            $output = $output .  "Sorry, training already exists.";
             $uploadOk = 0;
         }
 
         if ((!isset($_POST["tName"]) && !isset($_POST["tCategory"]) && !isset($_POST["tLocation"]) && !isset($_POST["tDescription"]) && !isset($_POST["tPrice"]))){
-            echo "Please fill in all fields";
+            $output = $output .  "Please fill in all fields";
             $uploadOk = 0;
         }
         if ($uploadOk == 0) {
-            echo "Sorry, your file was not uploaded.";
+            $output = $output .  "Sorry, your file was not uploaded.";
           // if everything is ok, try to upload file
           } else {
             $tName = $_POST["tName"];
@@ -62,22 +64,22 @@
             $tPrice = $_POST["tPrice"];
 
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-              echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+              $output = $output .  "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
               $sql = "INSERT IGNORE INTO trainings (tName, tCategory, tLocation, tDescription, tPrice)
                     VALUES ('$tName', '$tCategory', '$tLocation', '$tDescription', '$tPrice')";
 
             mysqli_query($conn, $sql);
             if ( mysqli_affected_rows($conn)>0){
-                echo "Records inserted successfully.";
+                $output = $output .  "Records inserted successfully.";
             }else{
-            echo "There is an existing training. Please use a different number";
+            $output += "There is an existing training. Please use a different number<p>";
             }
             } else {
-              echo "Sorry, there was an error adding the training.";
+              $output = $output . "Sorry, there was an error adding the training.";
             }
           }
         }else{
-            echo "Please fill in all fields.";
+            $output = $output . "Please fill in all fields.";
         }
 
         }
@@ -109,6 +111,7 @@
 
         <p><input type="submit" value="Add" name="submit"/></p>
     </form>
+    <p><?php echo $output?></p>
     </div>
 
     <footer>

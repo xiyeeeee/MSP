@@ -107,21 +107,45 @@
     $password = "";
     $dbname = "expert_db";
 
-            if (isset($_SESSION['useruid'])) {
+    if (isset($_SESSION['useruid'])) {
 
-              require_once 'includes/db.inc.php';
-              require_once 'includes/functions.inc.php';
+    require_once 'includes/db.inc.php';
+    require_once 'includes/functions.inc.php';
 
-              $uidExists = uidExists($conn, $_SESSION['useruid'], $_SESSION['useruid']);
+    $uidExists = uidExists($conn, $_SESSION['useruid'], $_SESSION['useruid']);
+    // Display the details of the logged-in user
+     echo '<input type="text" id="name" name="name" value="' . $uidExists['usersUid'] . '" readonly>';
 
-              // Display the details of the logged-in user
-              echo '<input type="text" id="name" name="name" value="' . $uidExists['usersUid'] . '" readonly>';
+     $sql = "SELECT usersName, usersUid from users";
+     $result = $conn-> query($sql);
+     $conn-> close();
+      }
 
-              $sql = "SELECT usersName, usersUid from users";
-              $result = $conn-> query($sql);
+            
+      $name = "";
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "expert_db";
+      $conn = new mysqli($servername, $username, $password, $dbname);
 
-              $conn-> close();
-            }
+      // Check connection
+        if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+         }
+
+        // Get trainings with the desired tCategory values
+        $sql5 = "SELECT tLocation FROM trainings WHERE tName = '$name'";
+        $result = $conn->query($sql5);
+
+        if ($result->num_rows > 0) {
+          while($row = $result->fetch_assoc()) {
+            $train_loc = $row["tLocation"];
+          }
+      }
+      $conn->close();
+    
+
     ?>
     <br>
     <br>
@@ -133,7 +157,13 @@
       $train_name = '';
     }
      ?>
-    <select name="training" id="tName" value="<?php echo $train_name ?>">
+    <script>
+      function autofill(){
+        const select = document.getElementById('tName');
+        $name = select.value;
+      }
+    </script>
+    <select name="training" id="tName" value="<?php echo $train_name ?>" onchange="autofill()">
       <option value="">-</option>
       <optgroup label="Segmentation Workshop">
       <?php
@@ -157,7 +187,11 @@
             if ($result->num_rows > 0) {
                 // Output each training as an option in the dropdown menu
                 while($row = $result->fetch_assoc()) {
-                    echo "<option value='" . $row['tName'] . "'>" . $row['tName'] . "</option>";
+                    if ($train_name == $row['tName']){
+                      echo "<option value='" . $row['tName'] ."'" . " selected" . ">" . $row['tName'] . "</option>";
+                    }else{
+                      echo "<option value='" . $row['tName'] . "'>" . $row['tName'] . "</option>";
+                    }
                 }
             }else {
               echo '<option value="-">-</option>';
@@ -189,7 +223,11 @@
             if ($result->num_rows > 0) {
                 // Output each training as an option in the dropdown menu
                 while($row = $result->fetch_assoc()) {
-                    echo "<option value='" . $row['tName'] . "'>" . $row['tName'] . "</option>";
+                  if ($train_name == $row['tName']){
+                    echo "<option value='" . $row['tName'] ."'" . " selected" . ">" . $row['tName'] . "</option>";
+                    }else{
+                      echo "<option value='" . $row['tName'] . "'>" . $row['tName'] . "</option>";
+                    }
                 }
             }else {
               echo '<option value="-">-</option>';
@@ -221,7 +259,11 @@
             if ($result->num_rows > 0) {
                 // Output each training as an option in the dropdown menu
                 while($row = $result->fetch_assoc()) {
+                  if ($train_name == $row['tName']){
+                    echo "<option value='" . $row['tName'] ."'" . " selected" . ">" . $row['tName'] . "</option>";
+                  }else{
                     echo "<option value='" . $row['tName'] . "'>" . $row['tName'] . "</option>";
+                  }
                 }
             }else {
               echo '<option value="-">-</option>';
@@ -253,7 +295,11 @@
             if ($result->num_rows > 0) {
                 // Output each training as an option in the dropdown menu
                 while($row = $result->fetch_assoc()) {
-                    echo "<option value='" . $row['tName'] . "' data-location='" . $row['tLocation'] . "'>" . $row['tName'] . "</option>";
+                  if ($train_name == $row['tName']){
+                    echo "<option value='" . $row['tName'] ."'" . " selected" . ">" . $row['tName'] . "</option>";
+                  }else{
+                    echo "<option value='" . $row['tName'] . "'>" . $row['tName'] . "</option>";
+                  }
                 }
             }else {
               echo '<option value="-">-</option>';
@@ -274,15 +320,17 @@
     } else {
       $train_loc = '';
     }
+
      ?>
-      <input type="text" id="tLocation" name="tLocation" value="<?php echo $train_loc ?>" readonly>
+      <input type="text" id="tLocation" name="location" value="<?php echo $train_loc ?>" readonly>
+  
     <br><br>
 
 	<label for="remark">Remark:</label>
     <textarea name="remark" id="remark"></textarea>
 
 <input name="save_training" type="Submit" value="Submit">
-
+<script src="transfer.js"></script>
 <script>
   /*var trainingSelect = document.getElementById("training");
   var locationSelect = document.getElementById("location");
@@ -335,6 +383,6 @@
 
 </form>
 <br><br>
-<script src="script/transfer.js"></script>
+
 </body>
 </html>
