@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
     <title></title>
 </head>
 <body>
+  <div class= "dashboard-container">
+    <div class="header-container">
+    <div class="logo-container">
+      <div class="logo">
+        <h1 class="logo-text">Expert<span class="trademark">&reg;</span></h1>
+      </div>
+      <?php include 'adminNav.php';?>
+    </div>
+    </div>
+    </div>
+  	<br></br>
+      <br></br>
+      <br></br>
     <?php
     include_once "includes/connect.php";
 
@@ -31,7 +45,7 @@
         echo "<legend>Are you sure you want to delete?</legend>";
         echo "<input type='submit' name='submit' value='Yes'/>";
         echo "<input type='submit' name='submit' value='No'/>";
-        
+
     }
     ?>
     <p><input type="hidden" value=<?php echo "$names"?> name="oNames"/></p>

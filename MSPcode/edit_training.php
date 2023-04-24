@@ -25,7 +25,7 @@
 	<br>
 	<?php
 	require_once "includes/connect.php";
-	
+
 
 	if(isset($_POST["submit"])) {
 		$oldtName = $_POST["otName"];
@@ -52,7 +52,7 @@
 			echo "Sorry, training already exists.";
 			$uploadOk = 0;
 		}
-        
+
         if ((!isset($_POST["tName"]) && !isset($_POST["tCategory"]) && !isset($_POST["tLocation"]) && !isset($_POST["tDescription"]) && !isset($_POST["tPrice"]))){
             echo "Please fill in all fields";
             $uploadOk = 0;
@@ -73,8 +73,8 @@
 			  unlink($old_target_file);
               echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
               $sql = "UPDATE trainings SET tName = '$tName', tCategory = '$tCategory', tLocation ='$tLocation', tDescription='$tDescription', tPrice = '$tPrice' WHERE tName = '$oldtName'";
- 
-              
+
+
             if ( mysqli_query($conn, $sql)){
                 echo "Records updated successfully.";
             }
@@ -85,22 +85,22 @@
 	}else{
 		$oldtName = $_GET["sName"];
 	}
-		
+
 	?>
 	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
-        
+
         <p><label for="fileToUpload">Image: </label>
         <input type="file" name="fileToUpload" id="fileToUpload"/></p>
-        
+
         <p><label for="tName">Training Name: </label>
         <input type="text" name="tName" id="tName"/></p>
-        
+
         <p><label for="tCategory">Training Category: </label>
         <select name="tCategory" id="tCategory">
-            <option value="segmentation">Segmentation Workshop</option>
-            <option value="co-creation">Co-creation Workshop</option>
-            <option value="brainstorm">Brainstorm Workshop</option>
-            <option value="teamActivation">Team Activation Workshop</option>
+            <option value="Segmentation">Segmentation Workshop</option>
+            <option value="Co-creation">Co-creation Workshop</option>
+            <option value="Brainstorm">Brainstorm Workshop</option>
+            <option value="Activation">Team Activation Workshop</option>
         </select></p>
 
         <p><label for="tLocation">Training Location: </label>
@@ -111,7 +111,7 @@
 
         <p><label for="tDescription">Training Description: </label>
         <input type="text" name="tDescription" id="tDescription"/></p>
-        
+
         <p><input type="submit" value="Edit" name="submit"/></p>
 		<p><input type="hidden" value=<?php echo "$oldtName"?> name="otName"/></p>
     </form>

@@ -7,6 +7,19 @@
     <link rel="stylesheet" type="text/css" href="../style.css"/>
 </head>
 <body>
+  <div class= "dashboard-container">
+    <div class="header-container">
+    <div class="logo-container">
+      <div class="logo">
+        <h1 class="logo-text">Expert<span class="trademark">&reg;</span></h1>
+      </div>
+      <?php include 'adminNav.php';?>
+    </div>
+    </div>
+    </div>
+  	<br></br>
+      <br></br>
+      <br></br>
     <?php
         include_once "includes/connect.php";
 
@@ -18,10 +31,10 @@
         if(mysqli_num_rows($result) > 0){
             while($row = mysqli_fetch_assoc($result)){
                 array_push($training,$row['tName']);
-            }            
+            }
         }
 
-    
+
     ?>
     <h1>Staff Information</h1>
     <div class>
