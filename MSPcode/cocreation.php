@@ -40,7 +40,7 @@
 		}
 
 		if (sizeof($trainings_by_category) != 0) {
-			foreach ($trainings_by_category['Co-creation'] as $training){
+			foreach ($trainings_by_category['Segmentation'] as $training){
 					echo "<section class='training'>";
 					echo "<div class='training-item'>";
 					$result = glob ('img/' . $training["tName"] . '.*');
@@ -50,7 +50,11 @@
 					echo "<p>" . $training["tDescription"] . "</p>";
 					echo "<p>Location: " . $training["tLocation"] . "</p>";
 					echo "<p>Price: RM" . $training["tPrice"] . "</p>";
-					/*enquire button*/
+					echo '<form action="request.php" method="POST">
+					<input name="tName" type="hidden" value="'. $training["tName"] . '"></input>
+					<input name="tLocation" type="hidden" value="' . $training["tLocation"] . '"></input>
+					<button name="enquire" type="submit">Enquire Now</button>
+					</form>';
 					echo '</div>';
 					echo '</div>';
 					echo '<br>';
