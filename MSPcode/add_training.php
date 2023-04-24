@@ -109,7 +109,7 @@
         <input type="text" name="tDescription" id="tDescription"/></p>
 
 
-        <p><input type="submit" value="Add" name="submit"/></p>
+        <p class="addtrainingtxt"><input type="submit" value="Add" name="submit"/></p>
     </form>
     <p><?php echo $output?></p>
     </div>
