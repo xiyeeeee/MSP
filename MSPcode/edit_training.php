@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	<title>TRAINING: ETMP</title>
 </head>
-<body>
+<body id="edit_trainingbg">
 <div class= "dashboard-container">
   <div class="header-container">
   <div class="logo-container">
@@ -17,12 +17,12 @@
   </div>
   </div>
 	<br>
+</br>
 	<br>
+</br>
 	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+</br>
+	
 	<?php
 	require_once "includes/connect.php";
 
@@ -87,9 +87,10 @@
 	}
 
 	?>
+   <div class= "edittraining-form">
 	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
 
-        <p><label for="fileToUpload">Image: </label>
+        <p class="file-container"><label for="fileToUpload">Image: </label>
         <input type="file" name="fileToUpload" id="fileToUpload"/></p>
 
         <p><label for="tName">Training Name: </label>
@@ -115,5 +116,34 @@
         <p><input type="submit" value="Edit" name="submit"/></p>
 		<p><input type="hidden" value=<?php echo "$oldtName"?> name="otName"/></p>
     </form>
+    </div>
+
+    <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <ul class="footer-nav">
+          <li><a href="#">Training</a></li>
+          <li><a href="#">Payment</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Account</a></li>
+        </ul>
+        <p class="footer-info">Phone: 123-456-7890 | Address: 123 Main St. | Email: info@expert.com</p>
+        <div class="footer-logo">
+
+          <p class="footer-copyright">Expert Training since 2023 &#169; </p>
+        </div>
+      </div>
+      <div class="footer-column">
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+      <script src="script/buttontop.js"></script>
 </body>
 </html>

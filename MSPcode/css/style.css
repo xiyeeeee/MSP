@@ -1236,3 +1236,360 @@ input[type="text"], select, textarea {
 {
   margin-right: 225px;
 }
+
+/*Edit Training*/
+#edit_trainingbg{
+  background: rgba(0, 0, 0, 0.5)url(../img/add_training.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.edittraining-form {
+  margin-left: 450px;
+  margin-bottom: 150px;
+  border: 12px solid rgb(15, 15, 113);
+  padding: 20px;
+  padding-top: 30px;
+  background-color: rgb(236, 205, 234);
+  color: rgb(15, 15, 113);
+  text-align: center;
+  width: 50%;
+}
+
+.edittraining-form label {
+  display: inline-block;
+  width: 150px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.edittraining-form input[type="text"],
+.edittraining-form select {
+  width: 60%;
+  padding: 10px;
+  border: 2px solid darkblue;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+input[type="text"], select, textarea {
+width: 300px;
+display: inline-block;
+}
+
+.edittraining-form input[type="submit"] {
+  background-color: rgb(15, 15, 113);;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 450px;
+  font-size: 20px;
+}
+
+.edittraining-form input[type="submit"]:hover {
+  background-color: white;
+  color: rgb(15, 15, 113);
+  transition: all 0.3s ease-in-out;
+
+}
+
+/*searchTraining*/
+#searchTrainingBox {
+  
+  border: 10px solid #092a3e; 
+  padding: 20px;
+  background-color: #F2F3F4; 
+  width: 50%;
+  margin-left: 450px;
+  margin-top: 80px;
+  margin-bottom: 200px;
+}
+
+
+#sh1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1c1c1c;
+}
+
+#searchForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#searchForm label {
+  font-weight: bold;
+  color: #000;
+}
+
+#searchForm input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+#searchForm input[type="submit"] {
+  background-color: #1A5276; 
+  color: #fff; 
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+#searchForm input[type="submit"]:hover {
+  background-color: #8bbddf; /* Lighter blue background on hover */
+  color: #000;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+#searchTrainingbg{
+  background: rgba(0, 0, 0, 0.5)url(../img/add_training.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+/*searchTrainingProcess*/
+.stbody {
+  text-align: center;
+  margin-bottom: 225px;
+}
+
+.sth1 {
+  margin-top: 50px;
+  font-size: 36px;
+  color: #000;
+}
+
+#searchProcess {
+  margin-top: 50px;
+  border: 10px solid #2c3e50;
+  width: 500px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-left: 70px;
+  padding-right: 70px;
+  background-color: whitesmoke;
+  
+}
+
+#searchProcess legend {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+  
+}
+
+#searchProcess ul {
+  margin: 0;
+  padding: 0;
+}
+
+#searchProcess li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+#searchProcess p {
+  font-size: 20px;
+  color: red;
+}
+
+#searchProcess input[type="submit"] {
+  background-color: #2c3e50;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#searchProcess input[type="submit"]:hover {
+  background-color: #7ccd9e;
+  color: #000058;
+}
+
+#searchTrainingProcessbg{
+  background: rgba(0, 0, 0, 0.5)url(../img/add_training.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+/*deleteTraining*/
+
+.dltbody {
+  text-align: center;
+  margin-bottom: 250px;
+  
+  
+}
+/*.dltbody h1 {
+  margin-top: 50px;
+  font-size: 36px;
+  color:whitesmoke;
+}*/
+.dltbody form {
+  margin: 50px auto;
+  display: inline-block;
+  text-align: center;
+  margin-top: 200px;
+  margin-top: 60px;
+  border: 5px solid rgb(7, 4, 59);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 55px;
+  background-color: #f9f8f9;
+  margin-bottom: 150px;
+  
+  
+}
+.dltbody form legend {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: rgb(22, 12, 74);
+  font-weight: bold;
+  
+  
+  
+  
+}
+
+.dltbody fieldset
+{
+  border: none;
+  padding: 5px;
+  width: 70%;
+  margin-left: 160px;
+  
+  
+}
+.dltbody form input[type="submit"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  width: 100px;
+  margin-left: 290px;
+  font-size: 20px;
+}
+.dltbody form input[type="submit"][value="Yes"] {
+  background-color: #13316d;
+  color: #fff;
+}
+.dltbody form input[type="submit"][value="No"] {
+  background-color: #881010;
+  color: #fff;
+}
+.dltbody form input[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #0b0101;
+}
+.dltbody p.warning {
+  color: rgb(118, 26, 26);
+  margin-top: 0px;
+  padding-top: 0;
+  font-weight: bold;
+}
+
+#deleteTrainingbg{
+  background: rgba(0, 0, 0, 0.5)url(../img/add_training.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+/*displayTrainingInfo.php*/
+
+.displayh1 {
+  text-align: center;
+  font-size: 36px;
+  margin-top: 10px;
+  color: #18042c;
+}
+
+.display-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0;
+  margin-bottom: 150px;
+  
+  
+}
+
+.display-container form {
+  border: 10px solid black;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  padding-left: 300px;
+  padding-right: 300px;
+  margin-top: 20px;
+  width: 50%;
+  color: #000;
+  background-color: whitesmoke;
+}
+
+.display-container fieldset {
+  border: none;
+  padding: 0;
+  padding-top: 10px;
+  margin: 0;
+}
+
+.display-container img {
+  display: block;
+  margin-top: 50px;
+  margin-left: 350px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin-bottom: 120px;
+}
+
+.display-container button {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.display-container button:first-of-type {
+  background-color: #13316d;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+}
+
+.display-container button:last-of-type {
+  background-color: #881010;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.display-container button:hover {
+  background-color: #ffffff;
+  color: #0b0101;
+}
+
+#displaybg{
+  background: rgba(0, 0, 0, 0.5)url(../img/add_training.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
