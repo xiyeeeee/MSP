@@ -21,6 +21,31 @@
   	<br></br>
       <br></br>
       <br></br>
+    <?php
+
+  $sName = "";
+  $error = "";
+  if($_SERVER["REQUEST_METHOD"] == "POST"){
+    if(empty($_POST["sName"])){
+        $error = "Please enter a training name";
+    }else{
+        $sName = test_input($_POST["sName"]);
+        if (!preg_match("/^[a-zA-Z-' ]*$/",$sName)) {
+            $error = "Only letters and white space allowed";
+        }else{
+            $sName = $_POST["sName"];
+            header("Location:SearchTrainingProcess.php?sName=$sName");
+        }
+    }
+  }
+
+  function test_input($data){
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
+  }
+  ?>
       <div id="searchTrainingBox">
       <h1 id="sh1">Search Training</h1>
       
@@ -30,32 +55,7 @@
     <p><input type="submit" value = "Search"/>
     </p>
     </form>
-      </div>
-    <?php
-
-        $sName = "";
-        $error = "";
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
-            if(empty($_POST["sName"])){
-                $error = "Please enter a training name";
-            }else{
-                $sName = test_input($_POST["sName"]);
-                if (!preg_match("/^[a-zA-Z-' ]*$/",$sName)) {
-                    $error = "Only letters and white space allowed";
-                }else{
-                    $sName = $_POST["sName"];
-                    header("Location:SearchTrainingProcess.php?sName=$sName");
-                }
-            }
-        }
-
-        function test_input($data){
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-        }
-    ?>
+    </div>
    
    <footer>
     <div class="footer-container">

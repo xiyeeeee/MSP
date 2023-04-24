@@ -21,6 +21,22 @@
   	<br></br>
       <br></br>
       <br></br>
+      <?php
+        include_once "includes/connect.php";
+
+        $training = array();
+        $sName = $_GET["sName"];
+        $sql = "SELECT tName FROM trainings WHERE INSTR(tName, '$sName')> 0";
+        $result = mysqli_query($conn, $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            while($row = mysqli_fetch_assoc($result)){
+                array_push($training,$row['tName']);
+            }
+        }
+
+
+    ?>    
 
       <div class="stbody">   
       <h1 class="sth1">Staff Information</h1>
@@ -45,23 +61,6 @@
     </form>
     </div>
     
-
-    <?php
-        include_once "includes/connect.php";
-
-        $training = array();
-        $sName = $_GET["sName"];
-        $sql = "SELECT tName FROM trainings WHERE INSTR(tName, '$sName')> 0";
-        $result = mysqli_query($conn, $sql);
-
-        if(mysqli_num_rows($result) > 0){
-            while($row = mysqli_fetch_assoc($result)){
-                array_push($training,$row['tName']);
-            }
-        }
-
-
-    ?>
 
 
 <footer>
