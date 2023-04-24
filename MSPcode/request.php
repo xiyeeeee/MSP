@@ -59,7 +59,7 @@
         die("Fail conection: " . $conn->connect_error);
     }
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['save_training'])){
         $name = $_POST["name"];
         $training = $_POST["training"];
         $location = $_POST["location"];
@@ -126,7 +126,14 @@
     <br>
     <br>
     <label for="training">Training:</label>
-    <select name="training" id="tName" value="tName">
+    <?php
+    if(isset($_POST['enquire'])){
+      $train_name = $_POST['tName'];
+    } else {
+      $train_name = '';
+    }
+     ?>
+    <select name="training" id="tName" value="<?php echo $train_name ?>">
       <option value="">-</option>
       <optgroup label="Segmentation Workshop">
       <?php
@@ -246,7 +253,7 @@
             if ($result->num_rows > 0) {
                 // Output each training as an option in the dropdown menu
                 while($row = $result->fetch_assoc()) {
-                    echo "<option value='" . $row['tName'] . "'>" . $row['tName'] . "</option>";
+                    echo "<option value='" . $row['tName'] . "' data-location='" . $row['tLocation'] . "'>" . $row['tName'] . "</option>";
                 }
             }else {
               echo '<option value="-">-</option>';
@@ -261,13 +268,20 @@
     <br><br>
 
     <label for="location">Location:</label>
-      <input type="text" id="tLocation" name="tLocation" value="tLocation" readonly>
+    <?php
+    if(isset($_POST['enquire'])){
+      $train_loc = $_POST['tLocation'];
+    } else {
+      $train_loc = '';
+    }
+     ?>
+      <input type="text" id="tLocation" name="tLocation" value="<?php echo $train_loc ?>" readonly>
     <br><br>
 
 	<label for="remark">Remark:</label>
     <textarea name="remark" id="remark"></textarea>
 
-<input type="Submit" value="Submit">
+<input name="save_training" type="Submit" value="Submit">
 
 <script>
   /*var trainingSelect = document.getElementById("training");
