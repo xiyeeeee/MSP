@@ -26,7 +26,7 @@
   <br>
 	<?php
 		require_once "includes/connect.php";
-		$sql = "SELECT tName, tCategory, tLocation, tPrice, tDescription from trainings WHERE tCategory = 'Segmentation'";
+		$sql = "SELECT tID, tName, tCategory, tLocation, tPrice, tDescription from trainings WHERE tCategory = 'Segmentation'";
 		$result = $conn-> query($sql);
 		echo '<h1 class = "title">Segmentation</h1>';
 		// Group the trainings by category
@@ -50,7 +50,11 @@
 					echo "<p>" . $training["tDescription"] . "</p>";
 					echo "<p>Location: " . $training["tLocation"] . "</p>";
 					echo "<p>Price: RM" . $training["tPrice"] . "</p>";
-					echo '<button id="enquiry-btn" type="button" data-tname="' . $training["tName"] . '" data-tlocation="' . $training["tLocation"] . '">Enquire Now</button>';
+					echo '<form action="request.php" method="POST">
+					<input name="tName" type="hidden" value="'. $training["tName"] . '"></input>
+					<input name="tLocation" type="hidden" value="' . $training["tLocation"] . '"></input>
+					<button name="enquire" type="submit">Enquire Now</button>
+					</form>';
 					echo '</div>';
 					echo '</div>';
 					echo '<br>';

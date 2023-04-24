@@ -1,12 +1,10 @@
-function fillForm() {
-  // Get the training name and location from the clicked button's data attributes
-  const tName = event.target.dataset.trainingName;
-  const tLocation = event.target.dataset.trainingLocation;
+// Retrieve the selected training name and location when the user clicks the enquiry button
+$('#enquiry-btn').click(function() {
+    var selectedTraining = $('#training-dropdown option:selected');
+    var trainingName = selectedTraining.val();
+    var trainingLocation = selectedTraining.data('location');
 
-  // Fill the form input fields with the training name and location
-  document.getElementById("tName").value = tName;
-  document.getElementById("tLocation").value = tLocation;
-}
-
-// Attach the fillForm function to the enquiry button's click event
-document.getElementById("enquiry-btn").addEventListener("click", fillForm);
+    // Autofill the training name and location fields in the request form
+    $('#training-name-field').val(trainingName);
+    $('#training-location-field').val(trainingLocation);
+});
