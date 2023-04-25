@@ -40,7 +40,7 @@
         if($check !== false) {
             $output = $output .  "File is an image - " . $check["mime"] . ".";
             $uploadOk = 1;
-        } else {
+        } else { 
             $output = $output .  "File is not an image.";
             $uploadOk = 0;
         }
