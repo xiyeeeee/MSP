@@ -5,6 +5,7 @@
     <meta charset="utf-8"/>
     <meta name="author" content="Joseph"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style4.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body id="searchTrainingProcessbg">
@@ -39,7 +40,7 @@
     ?>    
 
       <div class="stbody">   
-      <h1 class="sth1">Staff Information</h1>
+      <h1 class="sth1">Training Information</h1>
     
     <form id = "searchProcess" method = "get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <fieldset>

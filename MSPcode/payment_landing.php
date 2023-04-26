@@ -7,6 +7,7 @@ $pageTitle = "Dashboard";
   <head>
     <title>PAYMENT LANDING</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style4.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://js.stripe.com/v3/"></script>
@@ -21,7 +22,7 @@ $pageTitle = "Dashboard";
     <?php include 'navigation.php';?>
   </div>
   </div>
-    <section>
+    <section id="landingtxt">
 	<div class="landing-container">
 		<h1 class="landing-product">Buy New Cool Products</h1>
 		<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod est vel ante mollis, ut ultrices massa elementum. Etiam congue bibendum nulla id laoreet. Praesent rutrum auctor velit id lobortis.</p>
