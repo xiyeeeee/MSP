@@ -85,7 +85,6 @@
 	}else{
 		$oldtName = $_GET["sName"];
 	}
-  echo $oldtName;
 	?>
    <div class= "edittraining-form">
 	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
