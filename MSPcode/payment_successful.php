@@ -10,13 +10,14 @@ $pageTitle = "Payment Successful";
 
     <title>PAYMENT SUCCESSFUL</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style4.css">
     <script src="script.js"></script>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
 </head>
-<body>
+<body id="spaymentbg">
 <div class="header-container">
   <div class="logo-container">
     <div class="logo">

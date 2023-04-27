@@ -739,36 +739,12 @@
       color: #11204a;
     }
 
-   /* .dashboard-container {
-      background-color: #11204a;
-      color: #11204a;
 
-    }
-
-    .dashboard {
-      display: grid;
-      grid-gap: 30px 20px;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2%;
-      height: 100vh;
-      /*margin: 0;
-
-      background-color: #11204a;
-      color: #11204a;
-      padding: 120px 20px 250px;
-      padding-bottom: 500px;
-      position: relative;
-      top: 80px;
-      height: 200px;
-
-
-    }*/
 
     .dashboard-container
     {
       background-color: #11204a;
-      /*display: flex;
-      justify-content: center;*/
+      
 
     }
     .dashboard {
@@ -1027,31 +1003,9 @@
       color: #11204a;
     }
 
-    .select-buttons {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      margin-top: 30px;
-    }
-
-    .abutton {
-      background-color: #0d2945;
-      color: #FFFFFF;
-      padding: 5px 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 18px;
-      margin-left: 55px;
-      margin-right: 55px;
-    }
-
-    .abutton:hover {
-      background-color: #F5F5F5;
-      color: #7f0909;
-      border: 2px solid #7f0909;
-      transition: all 0.3s ease-in-out;
+    #spaymentbg{
+      background: rgba(0, 0, 0, 0.5)url(../img/add_training.jpg) no-repeat center center fixed;
+      background-size: cover;
     }
 
     /*Payment failed*/
@@ -1090,32 +1044,7 @@
       color: #11204a;
     }
 
-    .fselect-buttons {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      margin-top: 30px;
-    }
-
-    .fbutton {
-      background-color: #0d2945;
-      color: #FFFFFF;
-      padding: 5px 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 18px;
-      margin-left: 65px;
-      margin-right: 95px;
-    }
-
-    .fbutton:hover {
-      background-color: #F5F5F5;
-      color: #7f0909;
-      border: 2px solid #7f0909;
-      transition: all 0.3s ease-in-out;
-    }
+  
 
     /*Payment Landing Page*/
 
@@ -1307,17 +1236,6 @@ display: inline-block;
 }
 
 /*searchTraining*/
-#searchTrainingBox {
-  
-  border: 10px solid #092a3e; 
-  padding: 20px;
-  background-color: #F2F3F4; 
-  width: 50%;
-  margin-left: 450px;
-  margin-top: 80px;
-  margin-bottom: 200px;
-}
-
 
 #sh1 {
   text-align: center;
@@ -1374,11 +1292,6 @@ display: inline-block;
   margin-bottom: 225px;
 }
 
-.sth1 {
-  margin-top: 50px;
-  font-size: 36px;
-  color: #000;
-}
 
 #searchProcess {
   margin-top: 50px;
@@ -1445,11 +1358,7 @@ display: inline-block;
   
   
 }
-/*.dltbody h1 {
-  margin-top: 50px;
-  font-size: 36px;
-  color:whitesmoke;
-}*/
+
 .dltbody form {
   margin: 50px auto;
   display: inline-block;
@@ -1494,7 +1403,7 @@ display: inline-block;
   cursor: pointer;
   margin: 10px;
   width: 100px;
-  margin-left: 150px;
+  margin-left: 250px;
   font-size: 20px;
 }
 .dltbody form input[type="submit"][value="Yes"] {
@@ -1514,6 +1423,7 @@ display: inline-block;
   margin-top: 0px;
   padding-top: 0;
   font-weight: bold;
+  
 }
 
 #deleteTrainingbg{
