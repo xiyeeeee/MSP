@@ -29,7 +29,7 @@
   $output ="";
 	if(isset($_POST["submit"])) {
 		$oldtName = $_POST["otName"];
-        $target_dir = "img/";
+        $target_dir = "img/trainingImg/";
 		$target_file = $target_dir . $_POST["tName"]. ".png";
         $old_target_file = $target_dir . $oldtName . ".png";
         $uploadOk = 1;
@@ -53,7 +53,7 @@
 			$uploadOk = 0;
 		}
 
-        if ((!isset($_POST["tName"]) && !isset($_POST["tCategory"]) && !isset($_POST["tLocation"]) && !isset($_POST["tDescription"]) && !isset($_POST["tPrice"]))){
+        if (!isset($_POST["tName"]) && !isset($_POST["tCategory"]) && !isset($_POST["tLocation"]) && !isset($_POST["tDescription"]) && !isset($_POST["tPrice"])){
             $output = $output . "Please fill in all fields";
             $uploadOk = 0;
         }
@@ -70,7 +70,7 @@
             $tPrice = $_POST["tPrice"];
 
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-			  unlink($old_target_file);
+			        unlink($old_target_file);
               $output = $output . "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
               $sql = "UPDATE trainings SET tName = '$tName', tCategory = '$tCategory', tLocation ='$tLocation', tDescription='$tDescription', tPrice = '$tPrice' WHERE tName = '$oldtName'";
 
@@ -85,7 +85,7 @@
 	}else{
 		$oldtName = $_GET["sName"];
 	}
-
+  echo $oldtName;
 	?>
    <div class= "edittraining-form">
 	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
@@ -114,7 +114,7 @@
         <input type="text" name="tDescription" id="tDescription"/></p>
 
         <p><input type="submit" value="Edit" name="submit"/></p>
-		<p><input type="hidden" value=<?php echo "$oldtName"?> name="otName"/></p>
+		<p><input type="hidden" value='<?php echo "$oldtName"?>' name="otName"/></p>
     </form>
     <p><?php echo $output?></p>
     </div>

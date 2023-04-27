@@ -38,7 +38,7 @@
             $sql ="DELETE FROM trainings WHERE tName = '$names'";
             if(mysqli_query($conn, $sql)){
                 $deleted = "The Training has been deleted";
-                unlink("img/".$names.".png");
+                unlink("img/trainingImg/".$names.".png");
             }else{
                 $deleted = "Something went wrong!";
             }
