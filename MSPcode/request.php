@@ -32,6 +32,7 @@
 
     function createTableTraining($conn){
         $sql = "CREATE TABLE IF NOT EXISTS requests (
+            rID INT(16) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
             name VARCHAR(30) NOT NULL,
             training VARCHAR(128) NOT NULL,
             tlocation VARCHAR(256) NOT NULL,
@@ -121,7 +122,7 @@
      $conn-> close();
       }
 
-            
+
       $name = "";
       $servername = "localhost";
       $username = "root";
@@ -144,7 +145,7 @@
           }
       }
       $conn->close();
-    
+
 
     ?>
     <br>
@@ -323,7 +324,7 @@
 
      ?>
       <input type="text" id="tLocation" name="location" value="<?php echo $train_loc ?>" readonly>
-  
+
     <br><br>
 
 	<label for="remark">Remark:</label>

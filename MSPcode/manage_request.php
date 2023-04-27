@@ -37,14 +37,16 @@
   }
 
   if (isset($_POST['accept'])) {
-    $sql = "UPDATE requests SET status='accepted' WHERE name='" . $_POST['name'] . "'";
+		$rID = $_POST['rID'];
+    $sql = "UPDATE requests SET status='accepted' WHERE rID = '$rID'";
     mysqli_query($conn, $sql);
   } elseif (isset($_POST['deny'])) {
-    $sql = "UPDATE requests SET status='denied' WHERE name='" . $_POST['name'] . "'";
+		$rID = $_POST['rID'];
+    $sql = "UPDATE requests SET status='denied' WHERE rID='$rID'";
     mysqli_query($conn, $sql);
   }
 
-  $sql = "SELECT name, training, tLocation, remark, status FROM requests";
+  $sql = "SELECT rID, name, training, tLocation, remark, status FROM requests";
   $result = mysqli_query($conn, $sql);
 
   if (mysqli_num_rows($result) > 0) {
@@ -66,7 +68,7 @@
       echo "<td>" . $row["status"] . "</td>";
       echo "<td>";
       echo "<form method='post' action=''>";
-      echo "<input type='hidden' name='name' value='" . $row["name"] . "'>";
+      echo "<input type='hidden' name='rID' value='" . $row["rID"] . "'>";
       echo "<button type='submit' name='accept'>Accept</button>";
       echo "<button type='submit' name='deny'>Deny</button>";
       echo "</form>";
