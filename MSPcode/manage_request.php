@@ -46,7 +46,7 @@
     mysqli_query($conn, $sql);
   }
 
-  $sql = "SELECT rID, name, training, tLocation, remark, status FROM requests";
+  $sql = "SELECT rID, Time, name, training, tLocation, remark, status FROM requests";
   $result = mysqli_query($conn, $sql);
 
   if (mysqli_num_rows($result) > 0) {
@@ -61,6 +61,7 @@
     echo "</tr>";
     while ($row = mysqli_fetch_assoc($result)) {
       echo "<tr>";
+      echo "<td>" . $row["Time"] . "</td>";
       echo "<td>" . $row["name"] . "</td>";
       echo "<td>" . $row["training"] . "</td>";
       echo "<td>" . $row["tLocation"] . "</td>";
