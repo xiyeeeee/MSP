@@ -26,7 +26,7 @@
 	<?php
 	require_once "includes/connect.php";
 
-
+  $output ="";
 	if(isset($_POST["submit"])) {
 		$oldtName = $_POST["otName"];
         $target_dir = "img/";
@@ -60,7 +60,7 @@
 		}
 
 		if ($uploadOk == 0) {
-            echo "Sorry, your file was not uploaded.";
+            $output = $output . "Sorry, your file was not uploaded.";
           // if everything is ok, try to upload file
           } else {
             $tName = $_POST["tName"];
