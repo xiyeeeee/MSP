@@ -54,7 +54,7 @@
         echo "</fieldset>";
     }
     ?>
-    <p><input type="hidden" value=<?php echo "$names"?> name="oNames"/></p>
+    <p><input type="hidden" value='<?php echo "$names"?>' name="oNames"/></p>
     <p class="warning"><?php echo $deleted?></p>
     </form>
     </p>
